@@ -79,10 +79,7 @@ export default async function RootLayout({
   }
 
   return (
-    <html
-      lang={locale}
-      suppressHydrationWarning
-    >
+    <html lang={locale} className="dark" suppressHydrationWarning>
       <head>
         <link rel="icon" href={envConfigs.app_favicon} />
         <link rel="alternate icon" href="/favicon.ico" />

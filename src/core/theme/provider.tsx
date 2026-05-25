@@ -9,8 +9,8 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (typeof document !== 'undefined' && locale) {
       document.documentElement.lang = locale;
-      document.documentElement.classList.remove('dark');
-      document.documentElement.style.colorScheme = 'light';
+      document.documentElement.classList.add('dark');
+      document.documentElement.style.colorScheme = 'dark';
     }
   }, [locale]);
 
