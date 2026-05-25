@@ -275,7 +275,7 @@ export function Header({ header }: { header: HeaderType }) {
                   aria-label={
                     isMobileMenuOpen == true ? 'Close Menu' : 'Open Menu'
                   }
-                  className="relative z-20 -m-2.5 -mr-3 block cursor-pointer p-2.5 lg:hidden"
+                  className="relative z-20 -m-2.5 -mr-3 block cursor-pointer p-2.5 text-white lg:hidden"
                 >
                   <Menu className="m-auto size-5 duration-200 in-data-[state=active]:scale-0 in-data-[state=active]:rotate-180 in-data-[state=active]:opacity-0" />
                   <X className="absolute inset-0 m-auto size-5 scale-0 -rotate-180 opacity-0 duration-200 in-data-[state=active]:scale-100 in-data-[state=active]:rotate-0 in-data-[state=active]:opacity-100" />
@@ -300,7 +300,7 @@ export function Header({ header }: { header: HeaderType }) {
                           'focus-visible:ring-ring inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium whitespace-nowrap transition-colors focus-visible:ring-1 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50',
                           'h-7 px-3 ring-0',
                           button.variant === 'outline'
-                            ? 'bg-background border-primary ring-foreground/10 hover:bg-muted/50 dark:ring-foreground/15 dark:hover:bg-muted/50 border border-transparent shadow-sm ring-1 shadow-black/15 duration-200'
+                            ? 'border border-white/25 bg-white/10 text-white shadow-sm ring-1 ring-white/15 shadow-black/15 duration-200 hover:bg-white/20 hover:text-white'
                             : 'bg-primary text-primary-foreground hover:bg-primary/90 border-[0.5px] border-white/25 shadow-md ring-1 shadow-black/20 ring-(--ring-color) [--ring-color:color-mix(in_oklab,var(--color-foreground)15%,var(--color-primary))]'
                         )}
                       >
@@ -314,11 +314,15 @@ export function Header({ header }: { header: HeaderType }) {
                       </Link>
                     ))}
 
-                  {header.show_theme ? <ThemeToggler /> : null}
-                  {header.show_locale ? <LocaleSelector /> : null}
+                  {header.show_theme ? (
+                    <ThemeToggler className="text-white" />
+                  ) : null}
+                  {header.show_locale ? (
+                    <LocaleSelector className="text-white hover:bg-white/10 hover:text-white" />
+                  ) : null}
                   <div className="flex-1 md:hidden"></div>
                   {header.show_sign ? (
-                    <SignUser userNav={header.user_nav} />
+                    <SignUser userNav={header.user_nav} isScrolled={isScrolled} />
                   ) : null}
                 </div>
               </div>

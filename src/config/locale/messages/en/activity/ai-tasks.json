@@ -1,14 +1,14 @@
 {
   "fields": {
     "title": "Title",
-    "media_type": "Type",
+    "media_type": "Media Type",
     "provider": "Provider",
     "model": "Model",
     "prompt": "Prompt",
     "options": "Options",
     "status": "Status",
     "result": "Result",
-    "cost_credits": "Credits",
+    "cost_credits": "Cost Credits",
     "created_at": "Created At",
     "action": "Action"
   },
@@ -26,6 +26,6 @@
       "view": "View Task",
       "refresh": "Refresh Task"
     },
-    "empty_message": "No tasks"
+    "empty_message": "No tasks found"
   }
 }

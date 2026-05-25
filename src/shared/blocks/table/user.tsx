@@ -1,6 +1,3 @@
-import moment from 'moment';
-
-import { Link } from '@/core/i18n/navigation';
 import {
   Avatar,
   AvatarFallback,
@@ -29,16 +26,12 @@ export function User({
   }
 
   return (
-    <Link
-      href={`/admin/users?email=${value.email}`}
-      target="_blank"
-      className={cn('flex items-center gap-2', className)}
-    >
+    <div className={cn('flex items-center gap-2', className)}>
       <Avatar className={className}>
         <AvatarImage src={value.image || ''} alt={value.name} />
         <AvatarFallback>{value.name?.charAt(0) || 'U'}</AvatarFallback>
       </Avatar>
       <div className="flex flex-col">{value.name}</div>
-    </Link>
+    </div>
   );
 }
