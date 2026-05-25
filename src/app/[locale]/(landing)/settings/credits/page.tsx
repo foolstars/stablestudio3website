@@ -15,6 +15,32 @@ import { getUserInfo } from '@/shared/models/user';
 import { Tab } from '@/shared/types/blocks/common';
 import { type Table } from '@/shared/types/blocks/table';
 
+const creditDescriptionAliases: Record<string, string> = {
+  初始积分: 'initial_credits',
+  初始化积分: 'initial_credits',
+  赠送积分: 'grant_credits',
+  授予积分: 'grant_credits',
+  生成音乐: 'generate_music',
+  生成图片: 'generate_image',
+  生成图像: 'generate_image',
+  生成视频: 'generate_video',
+};
+
+function getCreditDescriptionKey(description?: string | null) {
+  const rawDescription = String(description || '').trim();
+  if (creditDescriptionAliases[rawDescription]) {
+    return creditDescriptionAliases[rawDescription];
+  }
+
+  return rawDescription
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, '_')
+    .replace(/[^\w]/g, '_')
+    .replace(/_+/g, '_')
+    .replace(/^_|_$/g, '');
+}
+
 export default async function CreditsPage({
   searchParams,
 }: {
@@ -53,12 +79,26 @@ export default async function CreditsPage({
         title: t('fields.transaction_no'),
         type: 'copy',
       },
-      { name: 'description', title: t('fields.description') },
+      {
+        name: 'description',
+        title: t('fields.description'),
+        callback: (item: Credit) => {
+          const key = getCreditDescriptionKey(item.description);
+          return key && t.has(`values.description.${key}`)
+            ? t(`values.description.${key}`)
+            : item.description;
+        },
+      },
       {
         name: 'transactionType',
         title: t('fields.type'),
         type: 'label',
         metadata: { variant: 'outline' },
+        callback: (item: Credit) =>
+          item.transactionType &&
+          t.has(`values.transaction_type.${item.transactionType}`)
+            ? t(`values.transaction_type.${item.transactionType}`)
+            : item.transactionType,
       },
       {
         name: 'transactionScene',
@@ -66,6 +106,11 @@ export default async function CreditsPage({
         type: 'label',
         placeholder: '-',
         metadata: { variant: 'outline' },
+        callback: (item: Credit) =>
+          item.transactionScene &&
+          t.has(`values.transaction_scene.${item.transactionScene}`)
+            ? t(`values.transaction_scene.${item.transactionScene}`)
+            : item.transactionScene,
       },
       {
         name: 'credits',

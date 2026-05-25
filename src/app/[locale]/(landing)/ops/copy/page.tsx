@@ -1,6 +1,7 @@
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 
+import { locales } from '@/config/locale';
 import { Button } from '@/shared/components/ui/button';
 import {
   Card,
@@ -12,14 +13,15 @@ import {
 import { Input } from '@/shared/components/ui/input';
 import { Label } from '@/shared/components/ui/label';
 import { Textarea } from '@/shared/components/ui/textarea';
-import { locales } from '@/config/locale';
 import { getConfigs, saveConfigs } from '@/shared/models/config';
 import { getUserInfo } from '@/shared/models/user';
 import {
-  seoCopyDefaults,
+  getLocalizedSeoCopyKey,
+  normalizeSeoCopyLocale,
+  seoCopyDefaultsByLocale,
   seoCopyKeys,
+  type SeoCopyKey,
 } from '@/shared/services/seo-copy';
-import type { SeoCopyKey } from '@/shared/services/seo-copy';
 
 const copyFields: {
   key: SeoCopyKey;
@@ -108,8 +110,12 @@ async function saveCopy(formData: FormData) {
     throw new Error('no auth');
   }
 
+  const locale = normalizeSeoCopyLocale(String(formData.get('locale') || 'zh'));
   const values = Object.fromEntries(
-    seoCopyKeys.map((key) => [key, String(formData.get(key) || '').trim()])
+    seoCopyKeys.map((key) => [
+      getLocalizedSeoCopyKey(key, locale),
+      String(formData.get(key) || '').trim(),
+    ])
   );
 
   await saveConfigs(values);
@@ -124,29 +130,46 @@ async function saveCopy(formData: FormData) {
     revalidatePath(`/${locale}/ops/copy`);
   });
 
-  redirect('/ops/copy?saved=1');
+  redirect(`/ops/copy?locale=${locale}&saved=1`);
 }
 
 export default async function OpsCopyPage({
   searchParams,
 }: {
-  searchParams: Promise<{ saved?: string }>;
+  searchParams: Promise<{ locale?: string; saved?: string }>;
 }) {
   const user = await getUserInfo();
   if (!user) {
     redirect('/sign-in?callbackUrl=/ops/copy');
   }
 
-  const { saved } = await searchParams;
+  const { locale: selectedLocaleParam, saved } = await searchParams;
+  const selectedLocale = normalizeSeoCopyLocale(selectedLocaleParam || 'zh');
   const configs = await getConfigs();
+  const defaults = seoCopyDefaultsByLocale[selectedLocale];
 
   return (
     <div className="max-w-4xl space-y-6">
       <div className="space-y-2">
         <h2 className="text-2xl font-semibold tracking-tight">文案配置</h2>
         <p className="text-muted-foreground text-sm">
-          修改首页和价格页测试文案，保存后刷新对应页面即可查看效果。
+          修改首页、音乐生成器页和价格页测试文案，保存后刷新对应语言页面即可查看效果。
         </p>
+      </div>
+
+      <div className="flex flex-wrap items-center gap-2">
+        <Button
+          asChild
+          variant={selectedLocale === 'zh' ? 'default' : 'outline'}
+        >
+          <a href="/ops/copy?locale=zh">中文文案</a>
+        </Button>
+        <Button
+          asChild
+          variant={selectedLocale === 'en' ? 'default' : 'outline'}
+        >
+          <a href="/ops/copy?locale=en">英文文案</a>
+        </Button>
       </div>
 
       {saved === '1' && (
@@ -164,8 +187,13 @@ export default async function OpsCopyPage({
         </CardHeader>
         <CardContent>
           <form action={saveCopy} className="space-y-6">
+            <input type="hidden" name="locale" value={selectedLocale} />
             {copyFields.map((field) => {
-              const value = configs[field.key] || seoCopyDefaults[field.key];
+              const localizedKey = getLocalizedSeoCopyKey(
+                field.key,
+                selectedLocale
+              );
+              const value = configs[localizedKey] || defaults[field.key];
 
               return (
                 <div key={field.key} className="grid gap-2">
@@ -178,7 +206,11 @@ export default async function OpsCopyPage({
                       rows={4}
                     />
                   ) : (
-                    <Input id={field.key} name={field.key} defaultValue={value} />
+                    <Input
+                      id={field.key}
+                      name={field.key}
+                      defaultValue={value}
+                    />
                   )}
                   <p className="text-muted-foreground text-xs">
                     {field.description}

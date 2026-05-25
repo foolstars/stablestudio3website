@@ -22,5 +22,26 @@
     "buttons": {
       "purchase": "购买积分"
     }
+  },
+  "values": {
+    "transaction_type": {
+      "grant": "授予",
+      "consume": "消费"
+    },
+    "transaction_scene": {
+      "payment": "支付",
+      "subscription": "订阅",
+      "renewal": "续费",
+      "gift": "赠送",
+      "reward": "奖励"
+    },
+    "description": {
+      "initial_credits": "初始积分",
+      "grant_credits": "授予积分",
+      "grant_credit": "授予积分",
+      "generate_music": "生成音乐",
+      "generate_image": "生成图片",
+      "generate_video": "生成视频"
+    }
   }
 }

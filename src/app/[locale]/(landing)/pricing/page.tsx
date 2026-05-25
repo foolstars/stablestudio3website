@@ -14,8 +14,14 @@ export const revalidate = 0;
 export const generateMetadata = getSeoCopyMetadata({
   titleKey: 'seo_pricing_title',
   descriptionKey: 'seo_pricing_description',
-  fallbackTitle: '音乐积分方案',
-  fallbackDescription: '选择站内积分包，开始测试和生成 AI 音乐。',
+  fallbackTitle: {
+    en: 'Music Credits',
+    zh: '音乐积分方案',
+  },
+  fallbackDescription: {
+    en: 'Choose site credits to test and generate AI music.',
+    zh: '选择站内积分包，开始测试和生成 AI 音乐。',
+  },
   canonicalUrl: '/pricing',
 });
 
@@ -54,7 +60,7 @@ export default async function PricingPage({
     },
   };
   const configs = await getConfigs();
-  applyPricingSeoCopy(page, configs);
+  applyPricingSeoCopy(page, configs, locale);
 
   // load page component
   const Page = await getThemePage('dynamic-page');

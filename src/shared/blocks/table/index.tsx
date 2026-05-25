@@ -85,7 +85,7 @@ export function Table({
                     cellContent = (
                       <Label
                         placeholder={column.placeholder}
-                        value={value}
+                        value={content}
                         metadata={column.metadata}
                         className={column.className}
                       />

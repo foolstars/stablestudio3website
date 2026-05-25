@@ -22,5 +22,26 @@
     "buttons": {
       "purchase": "Purchase Credits"
     }
+  },
+  "values": {
+    "transaction_type": {
+      "grant": "Grant",
+      "consume": "Consume"
+    },
+    "transaction_scene": {
+      "payment": "Payment",
+      "subscription": "Subscription",
+      "renewal": "Renewal",
+      "gift": "Gift",
+      "reward": "Reward"
+    },
+    "description": {
+      "initial_credits": "Initial credits",
+      "grant_credits": "Grant credits",
+      "grant_credit": "Grant credit",
+      "generate_music": "Generate music",
+      "generate_image": "Generate image",
+      "generate_video": "Generate video"
+    }
   }
 }

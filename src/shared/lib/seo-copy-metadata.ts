@@ -5,9 +5,11 @@ import { envConfigs } from '@/config';
 import { defaultLocale } from '@/config/locale';
 import { getConfigs } from '@/shared/models/config';
 import {
-  getSeoCopyValue,
+  getLocalizedSeoCopyValue,
   SeoCopyKey,
 } from '@/shared/services/seo-copy';
+
+type LocalizedFallback = string | Partial<Record<'en' | 'zh', string>>;
 
 export function getSeoCopyMetadata({
   titleKey,
@@ -18,8 +20,8 @@ export function getSeoCopyMetadata({
 }: {
   titleKey: SeoCopyKey;
   descriptionKey: SeoCopyKey;
-  fallbackTitle: string;
-  fallbackDescription: string;
+  fallbackTitle: LocalizedFallback;
+  fallbackDescription: LocalizedFallback;
   canonicalUrl: string;
 }) {
   return async function generateMetadata({
@@ -31,11 +33,17 @@ export function getSeoCopyMetadata({
     setRequestLocale(locale);
 
     const configs = await getConfigs();
-    const title = getSeoCopyValue(configs, titleKey, fallbackTitle);
-    const description = getSeoCopyValue(
+    const title = getLocalizedSeoCopyValue(
+      configs,
+      titleKey,
+      locale,
+      getLocalizedFallback(fallbackTitle, locale)
+    );
+    const description = getLocalizedSeoCopyValue(
       configs,
       descriptionKey,
-      fallbackDescription
+      locale,
+      getLocalizedFallback(fallbackDescription, locale)
     );
     const canonical = getCanonicalUrl(canonicalUrl, locale);
     const imageUrl = envConfigs.app_preview_image.startsWith('http')
@@ -66,6 +74,15 @@ export function getSeoCopyMetadata({
       },
     };
   };
+}
+
+function getLocalizedFallback(fallback: LocalizedFallback, locale: string) {
+  if (typeof fallback === 'string') {
+    return fallback;
+  }
+
+  const normalizedLocale = locale === 'zh' || locale === 'zh-CN' ? 'zh' : 'en';
+  return fallback[normalizedLocale] || fallback.en || fallback.zh || '';
 }
 
 function getCanonicalUrl(canonicalUrl: string, locale: string) {
