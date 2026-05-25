@@ -1,0 +1,15 @@
+{
+  "metadata": {
+    "title": "Music Generator Updates",
+    "description": "See new features, model integrations, and experience improvements."
+  },
+  "page": {
+    "sections": {
+      "updates": {
+        "id": "updates",
+        "title": "Music Generator Updates",
+        "description": "See new features, model integrations, and experience improvements."
+      }
+    }
+  }
+}

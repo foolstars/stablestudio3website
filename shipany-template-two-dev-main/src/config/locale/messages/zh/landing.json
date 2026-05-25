@@ -1,0 +1,191 @@
+{
+  "header": {
+    "id": "header",
+    "brand": {
+      "title": "Stable Audio Generator",
+      "logo": {
+        "src": "/logo.png",
+        "alt": "Stable Audio Generator",
+        "width": 100,
+        "height": 100
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "功能亮点",
+          "url": "/#features",
+          "icon": "Sparkles"
+        },
+        {
+          "title": "音乐场景",
+          "url": "/showcases",
+          "icon": "Music"
+        },
+        {
+          "title": "积分方案",
+          "url": "/pricing",
+          "icon": "Coins"
+        },
+        {
+          "title": "开始生成",
+          "url": "/ai-music-generator",
+          "icon": "RiMusic2Line"
+        },
+        {
+          "title": "资源",
+          "icon": "FileText",
+          "children": [
+            {
+              "title": "音乐创作博客",
+              "description": "阅读提示词、模型和产品更新",
+              "url": "/blog",
+              "icon": "Newspaper"
+            },
+            {
+              "title": "更新日志",
+              "description": "查看音乐生成器的新功能",
+              "url": "/updates",
+              "icon": "Clock"
+            },
+            {
+              "title": "文档",
+              "description": "查看配置和使用说明",
+              "url": "/docs",
+              "target": "_blank",
+              "icon": "BookOpenText"
+            }
+          ]
+        }
+      ]
+    },
+    "buttons": [],
+    "user_nav": {
+      "show_name": true,
+      "show_credits": true,
+      "show_sign_out": true,
+      "items": [
+        {
+          "title": "积分",
+          "url": "/settings/credits",
+          "icon": "Coins"
+        },
+        {
+          "title": "生成记录",
+          "url": "/activity/ai-tasks",
+          "icon": "Activity"
+        }
+      ]
+    },
+    "show_sign": true,
+    "show_theme": true,
+    "show_locale": true
+  },
+  "footer": {
+    "id": "footer",
+    "brand": {
+      "title": "Stable Audio Generator",
+      "description": "一个黑色沉浸式 AI 音乐工作台，把提示词变成可播放的音乐草稿。",
+      "logo": {
+        "src": "/logo.png",
+        "alt": "Stable Audio Generator",
+        "width": 100,
+        "height": 100
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "产品",
+          "children": [
+            {
+              "title": "功能亮点",
+              "url": "/#features",
+              "target": "_self"
+            },
+            {
+              "title": "音乐场景",
+              "url": "/showcases",
+              "target": "_self"
+            },
+            {
+              "title": "积分方案",
+              "url": "/pricing",
+              "target": "_self"
+            },
+            {
+              "title": "音乐生成器",
+              "url": "/ai-music-generator",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "资源",
+          "children": [
+            {
+              "title": "文档",
+              "url": "/docs",
+              "target": "_self"
+            },
+            {
+              "title": "博客",
+              "url": "/blog",
+              "target": "_self"
+            },
+            {
+              "title": "更新日志",
+              "url": "/updates",
+              "target": "_self"
+            }
+          ]
+        }
+      ]
+    },
+    "social": {
+      "items": [
+        {
+          "title": "X",
+          "icon": "RiTwitterXFill",
+          "url": "https://x.com/your-app-name",
+          "target": "_blank"
+        },
+        {
+          "title": "Github",
+          "icon": "Github",
+          "url": "https://github.com/your-app-name",
+          "target": "_blank"
+        },
+        {
+          "title": "Discord",
+          "icon": "RiDiscordFill",
+          "url": "https://discord.gg/your-app-name",
+          "target": "_blank"
+        },
+        {
+          "title": "邮箱",
+          "icon": "Mail",
+          "url": "mailto:support@your-domain.com",
+          "target": "_self"
+        }
+      ]
+    },
+    "agreement": {
+      "items": [
+        {
+          "title": "隐私政策",
+          "url": "/privacy-policy"
+        },
+        {
+          "title": "服务条款",
+          "url": "/terms-of-service"
+        }
+      ]
+    },
+    "show_theme": true,
+    "show_locale": true,
+    "show_built_with": false
+  }
+}
