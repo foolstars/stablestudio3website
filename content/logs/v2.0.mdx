@@ -1,0 +1,37 @@
+---
+title: 'Free Test Audio Released'
+description: 'You can now validate the music generation flow without external API credits'
+date: '2025-11-11'
+tags: ['AI Music', 'Test Audio', 'Stable Audio']
+version: '2.0.0'
+---
+
+The music generator now supports a Free Test Audio provider. It creates a short playable local test audio file, which is useful for validating the website flow before spending Stability API credits.
+
+<Accordion type="multiple" className="not-prose w-full">
+    <AccordionItem value="features">
+        <AccordionTrigger>What changed</AccordionTrigger>
+        <AccordionContent className="flex flex-col gap-4 text-balance">
+        <ul className="list-disc space-y-2 pl-4">
+            <li>Added a Free Test Audio provider</li>
+            <li>Added provider switching in the music generator</li>
+            <li>Kept Stable Audio 3.0 as the real generation option</li>
+            <li>Results still use task records, site credits, playback, and download flow</li>
+        </ul>
+        </AccordionContent>
+    </AccordionItem>
+
+    <AccordionItem value="usage">
+        <AccordionTrigger>How to test</AccordionTrigger>
+        <AccordionContent className="flex flex-col gap-4 text-balance">
+        <ul className="list-disc space-y-2 pl-4">
+            <li>Sign in and make sure the account has site credits</li>
+            <li>Open the music generator</li>
+            <li>Choose Free Test Audio</li>
+            <li>Enter a prompt and generate</li>
+            <li>Confirm the audio can play and download</li>
+        </ul>
+        </AccordionContent>
+    </AccordionItem>
+
+</Accordion>

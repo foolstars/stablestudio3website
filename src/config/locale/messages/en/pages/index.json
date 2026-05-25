@@ -1,0 +1,311 @@
+{
+  "page": {
+    "show_sections": [
+      "hero",
+      "introduce",
+      "benefits",
+      "usage",
+      "features",
+      "stats",
+      "testimonials",
+      "faq",
+      "cta"
+    ],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "AI Music Generator",
+        "highlight_text": "Music Generation",
+        "description": "Turn genre, mood, tempo, and instruments into playable music demos, background tracks, and audio ideas.",
+        "announcement": {
+          "badge": "Test Mode",
+          "title": "Free test audio is available for end-to-end checks",
+          "url": "/ai-music-generator"
+        },
+        "tip": "More specific prompts produce more stable musical directions",
+        "buttons": [
+          {
+            "title": "Start Generating Music",
+            "icon": "Music",
+            "url": "/ai-music-generator",
+            "target": "_self",
+            "variant": "default"
+          },
+          {
+            "title": "View Credit Plans",
+            "icon": "CreditCard",
+            "url": "/pricing",
+            "target": "_self",
+            "variant": "outline"
+          }
+        ],
+        "show_avatars": false,
+        "avatars_tip": "Create demos, loops, intros, and audio ideas for video, podcasts, games, ads, and personal projects",
+        "show_award": false
+      },
+      "logos": {
+        "id": "logos",
+        "title": "Stable Audio Generator is built on a modern web stack",
+        "items": [
+          {
+            "title": "Next.js"
+          },
+          {
+            "title": "React"
+          },
+          {
+            "title": "TailwindCSS"
+          },
+          {
+            "title": "Shadcn/UI"
+          },
+          {
+            "title": "Vercel"
+          }
+        ]
+      },
+      "introduce": {
+        "block": "features-list",
+        "id": "introduce",
+        "title": "From one prompt to playable audio",
+        "label": "Product",
+        "description": "Stable Audio Generator is an AI music workspace with a free local test mode and Stable Audio 3.0 for real generation.",
+        "items": [
+          {
+            "title": "Text to Music",
+            "description": "Describe genre, mood, tempo, instruments, and use case to create an audio draft.",
+            "icon": "RiMusic2Line"
+          },
+          {
+            "title": "Free Link Test",
+            "description": "Verify auth, credits, task records, player, and downloads without external API credits.",
+            "icon": "RiPlayCircleLine"
+          },
+          {
+            "title": "Switch to Real Models",
+            "description": "Choose Stable Audio 3.0 when you are ready to generate real music.",
+            "icon": "RiRobot2Line"
+          },
+          {
+            "title": "Built for Music Use Cases",
+            "description": "Draft background music, podcast intros, game loops, meditation ambience, and ad demos.",
+            "icon": "RiHeadphoneLine"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "benefits": {
+        "block": "features-accordion",
+        "id": "benefits",
+        "title": "Designed for fast music iteration",
+        "label": "Experience",
+        "description": "Spend less time waiting and more time shaping the musical direction.",
+        "items": [
+          {
+            "title": "Test the Flow First",
+            "description": "Confirm generation, playback, and download flows before spending Stability credits.",
+            "icon": "RiCheckboxCircleLine"
+          },
+          {
+            "title": "Audio-first Results",
+            "description": "Results appear as song cards with title, style, duration, playback, and download.",
+            "icon": "RiClapperboardAiLine"
+          },
+          {
+            "title": "Ready for a Music Product",
+            "description": "Use site credits for access control and external model credits for real audio generation.",
+            "icon": "RiCoinsLine"
+          }
+        ]
+      },
+      "usage": {
+        "block": "features-step",
+        "id": "usage",
+        "title": "How to generate your first AI track",
+        "description": "Start with test mode, then switch to real generation.",
+        "image_position": "left",
+        "text_align": "center",
+        "items": [
+          {
+            "title": "Choose a Provider",
+            "description": "Use Free Test Audio to validate the flow or Stable Audio 3.0 for real music."
+          },
+          {
+            "title": "Write a Music Prompt",
+            "description": "Include genre, mood, tempo, instruments, use case, and sonic texture."
+          },
+          {
+            "title": "Generate and Preview",
+            "description": "Wait for the task to finish and play the result on the page."
+          },
+          {
+            "title": "Download or Iterate",
+            "description": "Save a version you like or adjust the prompt for another direction."
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "features": {
+        "id": "features",
+        "title": "AI Music Generation Features",
+        "description": "Everything needed to test the flow and generate real audio.",
+        "items": [
+          {
+            "title": "Free Test Audio",
+            "description": "Generate playable local test audio to verify the full website flow.",
+            "icon": "RiPlayCircleLine"
+          },
+          {
+            "title": "Stable Audio 3.0",
+            "description": "Switch to Stability AI for real music generation.",
+            "icon": "RiMusic2Line"
+          },
+          {
+            "title": "Credit Control",
+            "description": "Manage user generation access with site credits.",
+            "icon": "RiCoinsLine"
+          },
+          {
+            "title": "Task Records",
+            "description": "Review generation tasks, statuses, and credit costs in the admin area.",
+            "icon": "RiListCheck3"
+          },
+          {
+            "title": "Online Preview",
+            "description": "Play generated audio directly after completion.",
+            "icon": "RiHeadphoneLine"
+          },
+          {
+            "title": "Audio Download",
+            "description": "Download useful results for editing or sharing.",
+            "icon": "RiDownload2Line"
+          }
+        ]
+      },
+      "stats": {
+        "id": "stats",
+        "title": "Built for music generation tests",
+        "description": "Validate first, then connect paid model credits.",
+        "items": [
+          {
+            "title": "$0",
+            "description": "Local test audio"
+          },
+          {
+            "title": "6s",
+            "description": "Test audio length"
+          },
+          {
+            "title": "30s",
+            "description": "Stable Audio default length"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "testimonials": {
+        "id": "testimonials",
+        "title": "Music creation scenarios",
+        "description": "From rough ideas to playable demos, shape music direction faster.",
+        "items": [
+          {
+            "name": "Video Creator",
+            "role": "Background music demos",
+            "quote": "I can describe the mood and pacing of a scene and quickly test a music direction."
+          },
+          {
+            "name": "Podcast Host",
+            "role": "Intros and transitions",
+            "quote": "It is useful for drafting multiple intro moods before picking one to refine."
+          },
+          {
+            "name": "Indie Game Developer",
+            "role": "Loop ideas",
+            "quote": "Prompting the level atmosphere is faster than browsing endless stock libraries."
+          },
+          {
+            "name": "Ad Strategist",
+            "role": "Pitch music",
+            "quote": "Fast audio mood boards make it easier for a team to align on tone."
+          },
+          {
+            "name": "Meditation Creator",
+            "role": "Ambient sound",
+            "quote": "Soft pads, nature ambience, and slow-tempo prompts are great for early drafts."
+          },
+          {
+            "name": "Music Explorer",
+            "role": "Prompt experiments",
+            "quote": "I can start from a sentence before opening a full production tool."
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "title": "AI Music Generation FAQ",
+        "description": "About free test mode, real models, and credits.",
+        "items": [
+          {
+            "question": "What is Free Test Audio?",
+            "answer": "It is a local test mode that creates playable test audio so you can verify auth, credits, task records, player, and download behavior."
+          },
+          {
+            "question": "Is Free Test Audio real AI music?",
+            "answer": "No. It is for technical flow validation and does not represent final music quality. Use Stable Audio 3.0 for real music generation."
+          },
+          {
+            "question": "Why does Stable Audio 3.0 say insufficient credits?",
+            "answer": "Stable Audio 3.0 consumes Stability platform credits. Those are separate from your site credits in the admin area."
+          },
+          {
+            "question": "How should I write prompts?",
+            "answer": "Include genre, mood, BPM, instruments, use case, and sonic texture, such as “warm lo-fi, 90bpm, soft drums, night city atmosphere”."
+          },
+          {
+            "question": "What are site credits for?",
+            "answer": "Site credits control how many generations a user can run on your website. External model generation still depends on that provider account balance."
+          },
+          {
+            "question": "Can I connect other music models later?",
+            "answer": "Yes. The provider switch is already in place, so you can add Hugging Face, Replicate, Fal, or self-hosted models later."
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "Run the free test audio flow first",
+        "description": "Confirm the website flow, then switch to Stable Audio 3.0 for real music generation.",
+        "buttons": [
+          {
+            "title": "Open Music Generator",
+            "url": "/ai-music-generator",
+            "target": "_self",
+            "icon": "Music"
+          },
+          {
+            "title": "View Credit Plans",
+            "url": "/pricing",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "CreditCard"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "subscribe": {
+        "id": "subscribe",
+        "title": "Subscribe to our newsletter",
+        "description": "Get the latest updates from Stable Audio Generator.",
+        "submit": {
+          "input": {
+            "placeholder": "Enter your email"
+          },
+          "button": {
+            "title": "Subscribe"
+          },
+          "action": "/api/subscribe"
+        },
+        "className": "bg-muted"
+      }
+    }
+  }
+}

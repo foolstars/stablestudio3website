@@ -1,0 +1,15 @@
+{
+  "metadata": {
+    "title": "音乐生成器更新日志",
+    "description": "查看 AI 音乐生成器的新功能、模型接入和体验改进。"
+  },
+  "page": {
+    "sections": {
+      "updates": {
+        "id": "updates",
+        "title": "音乐生成器更新日志",
+        "description": "查看 AI 音乐生成器的新功能、模型接入和体验改进。"
+      }
+    }
+  }
+}

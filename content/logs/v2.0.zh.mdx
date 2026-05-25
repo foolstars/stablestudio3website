@@ -1,0 +1,37 @@
+---
+title: '免费测试音频上线'
+description: '现在可以不消耗外部 API 额度先跑通音乐生成链路'
+date: '2025-11-11'
+tags: ['AI 音乐', '测试音频', 'Stable Audio']
+version: '2.0.0'
+---
+
+音乐生成器现在支持「免费测试音频」供应商。它会生成一段可播放的本地测试音频，适合在充值 Stability API credits 前确认网站流程是否正常。
+
+<Accordion type="multiple" className="not-prose w-full">
+    <AccordionItem value="features">
+        <AccordionTrigger>本次更新</AccordionTrigger>
+        <AccordionContent className="flex flex-col gap-4 text-balance">
+        <ul className="list-disc space-y-2 pl-4">
+            <li>新增免费测试音频供应商</li>
+            <li>音乐生成器支持供应商切换</li>
+            <li>保留 Stable Audio 3.0 正式生成入口</li>
+            <li>结果仍走任务记录、积分、播放器和下载流程</li>
+        </ul>
+        </AccordionContent>
+    </AccordionItem>
+
+    <AccordionItem value="usage">
+        <AccordionTrigger>如何测试</AccordionTrigger>
+        <AccordionContent className="flex flex-col gap-4 text-balance">
+        <ul className="list-disc space-y-2 pl-4">
+            <li>登录账号并确保有站内积分</li>
+            <li>打开音乐生成器</li>
+            <li>选择「免费测试音频」</li>
+            <li>输入提示词并生成</li>
+            <li>确认音频可以播放和下载</li>
+        </ul>
+        </AccordionContent>
+    </AccordionItem>
+
+</Accordion>

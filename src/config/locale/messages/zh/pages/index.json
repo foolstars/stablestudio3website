@@ -1,0 +1,310 @@
+{
+  "page": {
+    "show_sections": [
+      "hero",
+      "introduce",
+      "benefits",
+      "usage",
+      "features",
+      "stats",
+      "testimonials",
+      "faq",
+      "cta"
+    ],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "AI 音乐生成器",
+        "highlight_text": "音乐生成",
+        "description": "输入风格、情绪、节奏和乐器，快速生成可播放的音乐 Demo、短视频配乐和声音灵感。",
+        "announcement": {
+          "badge": "测试模式",
+          "title": "免费测试音频已上线，可先跑通生成链路",
+          "url": "/ai-music-generator"
+        },
+        "tip": "提示词越具体，音乐方向越稳定",
+        "buttons": [
+          {
+            "title": "开始生成音乐",
+            "icon": "Music",
+            "url": "/ai-music-generator",
+            "target": "_self",
+            "variant": "default"
+          },
+          {
+            "title": "查看积分方案",
+            "icon": "CreditCard",
+            "url": "/pricing",
+            "target": "_self",
+            "variant": "outline"
+          }
+        ],
+        "show_avatars": false,
+        "avatars_tip": "为短视频、播客、游戏、广告和个人创作快速生成音乐草稿",
+        "show_award": false
+      },
+      "logos": {
+        "title": "Stable Audio Generator 基于现代 Web 技术栈构建",
+        "items": [
+          {
+            "title": "Next.js"
+          },
+          {
+            "title": "React"
+          },
+          {
+            "title": "TailwindCSS"
+          },
+          {
+            "title": "Shadcn/UI"
+          },
+          {
+            "title": "Vercel"
+          }
+        ]
+      },
+      "introduce": {
+        "block": "features-list",
+        "id": "introduce",
+        "title": "从一句话到一段可播放音乐",
+        "label": "产品简介",
+        "description": "Stable Audio Generator 是一个面向创作者的 AI 音乐工作台，支持免费测试音频和 Stable Audio 3.0 正式生成。",
+        "items": [
+          {
+            "title": "文字生成音乐",
+            "description": "描述风格、情绪、速度、乐器和使用场景，快速得到音频草稿。",
+            "icon": "RiMusic2Line"
+          },
+          {
+            "title": "免费测试链路",
+            "description": "先用本地测试音频验证登录、积分、任务记录、播放器和下载流程。",
+            "icon": "RiPlayCircleLine"
+          },
+          {
+            "title": "正式模型可切换",
+            "description": "需要真实生成时，在页面里切换到 Stable Audio 3.0 供应商。",
+            "icon": "RiRobot2Line"
+          },
+          {
+            "title": "适合多种配乐场景",
+            "description": "短视频背景、播客片头、游戏循环、冥想氛围、广告 Demo 都能先做草稿。",
+            "icon": "RiHeadphoneLine"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "benefits": {
+        "block": "features-accordion",
+        "id": "benefits",
+        "title": "为音乐灵感迭代而设计",
+        "label": "核心体验",
+        "description": "减少等待和反复试错，把注意力放在音乐方向本身。",
+        "items": [
+          {
+            "title": "先免费验证流程",
+            "description": "不用消耗 Stability 官方余额，也能确认网站生成、播放、下载是否正常。",
+            "icon": "RiCheckboxCircleLine"
+          },
+          {
+            "title": "围绕音频结果展示",
+            "description": "生成结果以歌曲卡片展示，包含标题、风格、时长、播放和下载。",
+            "icon": "RiClapperboardAiLine"
+          },
+          {
+            "title": "面向真实音乐产品",
+            "description": "站内积分控制用户生成次数，外部模型额度用于真实音频生成。",
+            "icon": "RiCoinsLine"
+          }
+        ]
+      },
+      "usage": {
+        "block": "features-step",
+        "id": "usage",
+        "title": "如何生成第一段 AI 音乐",
+        "description": "从免费测试到正式生成，只需要几步。",
+        "image_position": "left",
+        "text_align": "center",
+        "items": [
+          {
+            "title": "选择生成模式",
+            "description": "先用免费测试音频跑通流程，或切到 Stable Audio 3.0 生成真实音乐。"
+          },
+          {
+            "title": "写清音乐提示词",
+            "description": "写明曲风、情绪、速度、乐器、使用场景和声音质感。"
+          },
+          {
+            "title": "生成并试听",
+            "description": "等待生成完成，在结果卡片中直接播放音频。"
+          },
+          {
+            "title": "下载或继续迭代",
+            "description": "保存满意版本，或调整提示词继续探索不同风格。"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "features": {
+        "id": "features",
+        "title": "AI 音乐生成核心功能",
+        "description": "覆盖从测试链路到真实音乐生成的关键步骤。",
+        "items": [
+          {
+            "title": "免费测试音频",
+            "description": "本地生成可播放测试音频，用于验证完整网站链路。",
+            "icon": "RiPlayCircleLine"
+          },
+          {
+            "title": "Stable Audio 3.0",
+            "description": "切换到 Stability AI 官方模型生成真实音乐。",
+            "icon": "RiMusic2Line"
+          },
+          {
+            "title": "积分控制",
+            "description": "通过站内积分管理用户生成次数和测试额度。",
+            "icon": "RiCoinsLine"
+          },
+          {
+            "title": "任务记录",
+            "description": "后台可查看生成任务、状态和消耗积分。",
+            "icon": "RiListCheck3"
+          },
+          {
+            "title": "在线试听",
+            "description": "生成完成后直接播放结果，快速判断方向。",
+            "icon": "RiHeadphoneLine"
+          },
+          {
+            "title": "音频下载",
+            "description": "满意的结果可以下载保存，方便继续制作。",
+            "icon": "RiDownload2Line"
+          }
+        ]
+      },
+      "stats": {
+        "id": "stats",
+        "title": "面向音乐生成测试",
+        "description": "先跑通，再接正式额度。",
+        "items": [
+          {
+            "title": "0 元",
+            "description": "本地测试音频"
+          },
+          {
+            "title": "6s",
+            "description": "测试音频时长"
+          },
+          {
+            "title": "30s",
+            "description": "Stable Audio 默认时长"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "testimonials": {
+        "id": "testimonials",
+        "title": "适合这些音乐创作场景",
+        "description": "从灵感草稿到可试听 Demo，让音乐方向更快成形。",
+        "items": [
+          {
+            "name": "短视频创作者",
+            "role": "背景音乐 Demo",
+            "quote": "输入画面氛围和节奏，很快就能得到适合剪辑节奏的配乐方向。"
+          },
+          {
+            "name": "播客主理人",
+            "role": "片头与转场",
+            "quote": "先生成几个不同情绪的片头草稿，再挑一个方向继续精修。"
+          },
+          {
+            "name": "独立游戏开发者",
+            "role": "循环背景音乐",
+            "quote": "用提示词描述关卡氛围，比从素材库里翻找更快。"
+          },
+          {
+            "name": "广告策划",
+            "role": "提案配乐",
+            "quote": "在提案阶段快速生成音乐情绪板，方便团队对齐感觉。"
+          },
+          {
+            "name": "冥想内容作者",
+            "role": "环境氛围",
+            "quote": "柔和 pad、自然氛围和慢节奏提示词很适合做初版声音方向。"
+          },
+          {
+            "name": "音乐爱好者",
+            "role": "灵感探索",
+            "quote": "不用打开复杂软件，先从一句提示词开始试风格。"
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "title": "AI 音乐生成常见问题",
+        "description": "关于免费测试模式、正式模型和积分的说明。",
+        "items": [
+          {
+            "question": "免费测试音频是什么？",
+            "answer": "它是站内本地测试模式，会生成一段可播放的测试音频，用来确认登录、积分、任务、播放器和下载链路是否正常。"
+          },
+          {
+            "question": "免费测试音频是真正的 AI 音乐吗？",
+            "answer": "不是。它用于技术链路验证，不依赖外部 API，也不代表最终音乐质量。正式音乐生成请切换到 Stable Audio 3.0。"
+          },
+          {
+            "question": "为什么 Stable Audio 3.0 会提示余额不足？",
+            "answer": "Stable Audio 3.0 会消耗 Stability 官方平台 credits，这和网站后台给用户设置的站内积分是两套额度。"
+          },
+          {
+            "question": "提示词应该怎么写？",
+            "answer": "建议写清曲风、情绪、BPM、乐器、使用场景和声音质感，例如“温暖 lo-fi，90bpm，柔和鼓点，夜晚城市氛围”。"
+          },
+          {
+            "question": "站内积分有什么用？",
+            "answer": "站内积分用于控制用户在你的网站里能生成多少次；外部模型是否能生成，还取决于对应 API 平台余额。"
+          },
+          {
+            "question": "后续可以接其他音乐模型吗？",
+            "answer": "可以。当前已经保留供应商切换结构，后续可以继续接 Hugging Face、Replicate、Fal 或自部署模型。"
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "先用免费测试音频跑通链路",
+        "description": "确认网站流程正常后，再切换到 Stable Audio 3.0 做真实音乐生成。",
+        "buttons": [
+          {
+            "title": "打开音乐生成器",
+            "url": "/ai-music-generator",
+            "target": "_self",
+            "icon": "Music"
+          },
+          {
+            "title": "查看积分方案",
+            "url": "/pricing",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "CreditCard"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "subscribe": {
+        "id": "subscribe",
+        "title": "订阅我们的邮件通知",
+        "description": "获取 Stable Audio Generator 的最新更新。",
+        "submit": {
+          "input": {
+            "placeholder": "输入邮箱"
+          },
+          "button": {
+            "title": "订阅"
+          },
+          "action": "/api/subscribe"
+        },
+        "className": "bg-muted"
+      }
+    }
+  }
+}

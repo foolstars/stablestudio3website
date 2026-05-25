@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "title": "音乐场景",
+    "description": "AI 音乐生成器适合的创作场景"
+  },
+  "page": {
+    "title": "音乐场景",
+    "sections": {
+      "showcases": {
+        "id": "showcases",
+        "title": "用 AI 音乐生成器制作这些声音草稿",
+        "description": "从短视频配乐到播客片头，先用提示词快速找到音乐方向。",
+        "groups": [
+          {
+            "name": "all",
+            "title": "全部场景"
+          },
+          {
+            "name": "video",
+            "title": "短视频"
+          },
+          {
+            "name": "podcast",
+            "title": "播客"
+          },
+          {
+            "name": "game",
+            "title": "游戏"
+          },
+          {
+            "name": "ambient",
+            "title": "氛围音乐"
+          },
+          {
+            "name": "commercial",
+            "title": "广告提案"
+          }
+        ],
+        "items": [
+          {
+            "title": "短视频背景音乐",
+            "description": "根据画面情绪生成节奏明确的背景音乐 Demo。",
+            "url": "/ai-music-generator",
+            "target": "_self",
+            "group": "video"
+          },
+          {
+            "title": "播客片头音乐",
+            "description": "为节目定位生成片头、转场和结尾声音方向。",
+            "url": "/ai-music-generator",
+            "target": "_self",
+            "group": "podcast"
+          },
+          {
+            "title": "游戏循环配乐",
+            "description": "描述关卡氛围，快速得到可循环音乐草稿。",
+            "url": "/ai-music-generator",
+            "target": "_self",
+            "group": "game"
+          },
+          {
+            "title": "冥想与睡眠氛围",
+            "description": "生成柔和、缓慢、空间感强的环境声音灵感。",
+            "url": "/ai-music-generator",
+            "target": "_self",
+            "group": "ambient"
+          },
+          {
+            "title": "广告提案配乐",
+            "description": "在提案阶段快速做几版音乐情绪板。",
+            "url": "/ai-music-generator",
+            "target": "_self",
+            "group": "commercial"
+          },
+          {
+            "title": "产品演示声音",
+            "description": "为产品视频、启动页或品牌片生成声音 Demo。",
+            "url": "/ai-music-generator",
+            "target": "_self",
+            "group": "commercial"
+          }
+        ]
+      }
+    },
+    "description": "适合使用 AI 音乐生成器创作的音乐和音频场景"
+  }
+}

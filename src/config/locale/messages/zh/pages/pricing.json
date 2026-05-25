@@ -1,0 +1,314 @@
+{
+  "metadata": {
+    "title": "音乐积分方案",
+    "description": "选择站内积分包，开始测试和生成 AI 音乐。"
+  },
+  "page": {
+    "title": "音乐积分方案",
+    "sections": {
+      "pricing": {
+        "id": "pricing",
+        "title": "音乐积分",
+        "description": "站内积分用于控制网站生成次数；正式调用 Stable Audio 3.0 时，还需要 Stability 官方 API credits。",
+        "groups": [
+          {
+            "name": "one-time",
+            "title": "单次积分包"
+          },
+          {
+            "name": "monthly",
+            "title": "月度创作包",
+            "is_featured": true,
+            "label": "适合测试"
+          },
+          {
+            "name": "yearly",
+            "title": "年度创作包"
+          }
+        ],
+        "items": [
+          {
+            "title": "试听包",
+            "description": "适合验证免费测试音频和基础生成流程。",
+            "features_title": "包含",
+            "features": [
+              "100 站内积分",
+              "有效期 30 天",
+              "AI 音乐生成器访问",
+              "免费测试音频链路",
+              "生成任务记录",
+              "在线试听与下载"
+            ],
+            "interval": "one-time",
+            "amount": 900,
+            "currency": "USD",
+            "price": "$9",
+            "unit": "",
+            "is_featured": false,
+            "tip": "站内积分用于控制网站生成次数；Stable Audio 3.0 仍需 Stability 官方 API credits。",
+            "button": {
+              "title": "获取积分",
+              "url": "/#pricing",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "music-trial",
+            "product_name": "Stable Audio 试听包",
+            "credits": 100,
+            "valid_days": 30,
+            "group": "one-time"
+          },
+          {
+            "title": "创作包",
+            "description": "适合持续测试提示词和音乐方向。",
+            "features_title": "包含",
+            "features": [
+              "300 站内积分",
+              "有效期 90 天",
+              "AI 音乐生成器访问",
+              "免费测试音频链路",
+              "生成任务记录",
+              "在线试听与下载"
+            ],
+            "interval": "one-time",
+            "amount": 1900,
+            "currency": "USD",
+            "price": "$19",
+            "unit": "",
+            "is_featured": true,
+            "tip": "站内积分用于控制网站生成次数；Stable Audio 3.0 仍需 Stability 官方 API credits。",
+            "button": {
+              "title": "获取积分",
+              "url": "/#pricing",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "music-creator",
+            "product_name": "Stable Audio 创作包",
+            "credits": 300,
+            "valid_days": 90,
+            "group": "one-time"
+          },
+          {
+            "title": "工作室包",
+            "description": "适合多人测试和批量音乐草稿。",
+            "features_title": "包含",
+            "features": [
+              "800 站内积分",
+              "有效期 180 天",
+              "AI 音乐生成器访问",
+              "免费测试音频链路",
+              "生成任务记录",
+              "在线试听与下载"
+            ],
+            "interval": "one-time",
+            "amount": 3900,
+            "currency": "USD",
+            "price": "$39",
+            "unit": "",
+            "is_featured": false,
+            "tip": "站内积分用于控制网站生成次数；Stable Audio 3.0 仍需 Stability 官方 API credits。",
+            "button": {
+              "title": "获取积分",
+              "url": "/#pricing",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "music-studio",
+            "product_name": "Stable Audio 工作室包",
+            "credits": 800,
+            "valid_days": 180,
+            "group": "one-time"
+          },
+          {
+            "title": "月度试听包",
+            "description": "每月补充站内积分，适合轻量测试。",
+            "features_title": "包含",
+            "features": [
+              "120 站内积分",
+              "有效期 30 天",
+              "AI 音乐生成器访问",
+              "免费测试音频链路",
+              "生成任务记录",
+              "在线试听与下载"
+            ],
+            "interval": "month",
+            "amount": 700,
+            "currency": "USD",
+            "price": "$7",
+            "unit": "/ 月",
+            "is_featured": false,
+            "tip": "站内积分用于控制网站生成次数；Stable Audio 3.0 仍需 Stability 官方 API credits。",
+            "button": {
+              "title": "获取积分",
+              "url": "/#pricing",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "music-trial-monthly",
+            "product_name": "Stable Audio 月度试听包",
+            "credits": 120,
+            "valid_days": 30,
+            "group": "monthly",
+            "plan_name": "月度试听包"
+          },
+          {
+            "title": "创作包",
+            "description": "每月更多站内积分，适合持续创作。",
+            "features_title": "包含",
+            "features": [
+              "400 站内积分",
+              "有效期 30 天",
+              "AI 音乐生成器访问",
+              "免费测试音频链路",
+              "生成任务记录",
+              "在线试听与下载"
+            ],
+            "interval": "month",
+            "amount": 1500,
+            "currency": "USD",
+            "price": "$15",
+            "unit": "/ 月",
+            "is_featured": true,
+            "tip": "站内积分用于控制网站生成次数；Stable Audio 3.0 仍需 Stability 官方 API credits。",
+            "button": {
+              "title": "获取积分",
+              "url": "/#pricing",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "music-creator-monthly",
+            "product_name": "Stable Audio 创作包",
+            "credits": 400,
+            "valid_days": 30,
+            "group": "monthly",
+            "plan_name": "创作包"
+          },
+          {
+            "title": "月度工作室包",
+            "description": "适合团队持续测试音乐生成流程。",
+            "features_title": "包含",
+            "features": [
+              "1000 站内积分",
+              "有效期 30 天",
+              "AI 音乐生成器访问",
+              "免费测试音频链路",
+              "生成任务记录",
+              "在线试听与下载"
+            ],
+            "interval": "month",
+            "amount": 2900,
+            "currency": "USD",
+            "price": "$29",
+            "unit": "/ 月",
+            "is_featured": false,
+            "tip": "站内积分用于控制网站生成次数；Stable Audio 3.0 仍需 Stability 官方 API credits。",
+            "button": {
+              "title": "获取积分",
+              "url": "/#pricing",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "music-studio-monthly",
+            "product_name": "Stable Audio 月度工作室包",
+            "credits": 1000,
+            "valid_days": 30,
+            "group": "monthly",
+            "plan_name": "月度工作室包"
+          },
+          {
+            "title": "年度试听包",
+            "description": "适合长期保留测试额度。",
+            "features_title": "包含",
+            "features": [
+              "1800 站内积分",
+              "有效期 365 天",
+              "AI 音乐生成器访问",
+              "免费测试音频链路",
+              "生成任务记录",
+              "在线试听与下载"
+            ],
+            "interval": "year",
+            "amount": 6900,
+            "currency": "USD",
+            "price": "$69",
+            "unit": "/ 年",
+            "is_featured": false,
+            "tip": "站内积分用于控制网站生成次数；Stable Audio 3.0 仍需 Stability 官方 API credits。",
+            "button": {
+              "title": "获取积分",
+              "url": "/#pricing",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "music-trial-yearly",
+            "product_name": "Stable Audio 年度试听包",
+            "credits": 1800,
+            "valid_days": 365,
+            "group": "yearly",
+            "plan_name": "年度试听包"
+          },
+          {
+            "title": "年度创作包",
+            "description": "适合全年音乐灵感迭代。",
+            "features_title": "包含",
+            "features": [
+              "6000 站内积分",
+              "有效期 365 天",
+              "AI 音乐生成器访问",
+              "免费测试音频链路",
+              "生成任务记录",
+              "在线试听与下载"
+            ],
+            "interval": "year",
+            "amount": 14900,
+            "currency": "USD",
+            "price": "$149",
+            "unit": "/ 年",
+            "is_featured": false,
+            "tip": "站内积分用于控制网站生成次数；Stable Audio 3.0 仍需 Stability 官方 API credits。",
+            "button": {
+              "title": "获取积分",
+              "url": "/#pricing",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "music-creator-yearly",
+            "product_name": "Stable Audio 年度创作包",
+            "credits": 6000,
+            "valid_days": 365,
+            "group": "yearly",
+            "plan_name": "年度创作包"
+          },
+          {
+            "title": "年度工作室包",
+            "description": "适合团队和内容工作室长期使用。",
+            "features_title": "包含",
+            "features": [
+              "16000 站内积分",
+              "有效期 365 天",
+              "AI 音乐生成器访问",
+              "免费测试音频链路",
+              "生成任务记录",
+              "在线试听与下载"
+            ],
+            "interval": "year",
+            "amount": 29900,
+            "currency": "USD",
+            "price": "$299",
+            "unit": "/ 年",
+            "is_featured": false,
+            "tip": "站内积分用于控制网站生成次数；Stable Audio 3.0 仍需 Stability 官方 API credits。",
+            "button": {
+              "title": "获取积分",
+              "url": "/#pricing",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "music-studio-yearly",
+            "product_name": "Stable Audio 年度工作室包",
+            "credits": 16000,
+            "valid_days": 365,
+            "group": "yearly",
+            "plan_name": "年度工作室包"
+          }
+        ]
+      }
+    }
+  },
+  "messages": {
+    "current_plan": "当前方案",
+    "processing": "处理中"
+  }
+}

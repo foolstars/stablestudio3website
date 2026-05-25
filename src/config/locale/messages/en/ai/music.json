@@ -1,0 +1,49 @@
+{
+  "metadata": {
+    "title": "AI Music Generator",
+    "description": "Turn mood, genre, tempo, and instruments into playable AI audio."
+  },
+  "page": {
+    "title": "AI Music Generator",
+    "description": "Turn mood, genre, tempo, and instruments into playable AI audio."
+  },
+  "generator": {
+    "title": "Music Generator",
+    "prompt": "Prompt",
+    "prompt_placeholder": "A love story of Romeo and Juliet",
+    "generate": "Generate Music",
+    "loading": "Loading...",
+    "generating": "Generating...",
+    "sign_in_to_generate": "Sign In to Generate Music",
+    "credits_cost": "{credits} credits cost",
+    "credits_remaining": "{credits} credits remaining",
+    "buy_credits": "Buy Credits",
+    "generation_progress": "Generation Progress",
+    "time_cost": "Test mode finishes quickly. Stable Audio 3.0 may take 2-3 minutes...",
+    "generated_song": "Generated Song",
+    "ready_to_play": "Ready to Play",
+    "audio_generating": "Audio Generating...",
+    "generating_song": "Generating Song...",
+    "waiting_generation": "Please wait while we create your masterpiece",
+    "no_song_generated": "No Song Generated",
+    "downloading": "Downloading...",
+    "download_success": "Download completed successfully",
+    "download_failed": "Failed to download audio",
+    "form": {
+      "custom_mode": "Custom Mode",
+      "title": "Title",
+      "title_placeholder": "The Sound of Silence",
+      "style": "Style of Music",
+      "style_placeholder": "indie, electronic, synths, 120bpm, distorted",
+      "instrumental": "Instrumental",
+      "prompt": "Prompt",
+      "prompt_placeholder": "Warm lo-fi electronic music, 90bpm, soft drums, night city atmosphere, ideal for short-form video",
+      "provider": "Provider",
+      "provider_test": "Free Test Audio",
+      "provider_stability": "Stable Audio 3.0",
+      "model": "Model",
+      "lyrics": "Lyrics",
+      "lyrics_placeholder": "Write your own lyrics, two verses (8 lines) for the best result"
+    }
+  }
+}

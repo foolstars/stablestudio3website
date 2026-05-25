@@ -1,0 +1,191 @@
+{
+  "header": {
+    "id": "header",
+    "brand": {
+      "title": "Stable Audio Generator",
+      "logo": {
+        "src": "/logo.png",
+        "alt": "Stable Audio Generator",
+        "width": 100,
+        "height": 100
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "Features",
+          "url": "/#features",
+          "icon": "Sparkles"
+        },
+        {
+          "title": "Music Use Cases",
+          "url": "/showcases",
+          "icon": "Music"
+        },
+        {
+          "title": "Credits",
+          "url": "/pricing",
+          "icon": "Coins"
+        },
+        {
+          "title": "Generate Music",
+          "url": "/ai-music-generator",
+          "icon": "RiMusic2Line"
+        },
+        {
+          "title": "Resources",
+          "icon": "FileText",
+          "children": [
+            {
+              "title": "Music Blog",
+              "description": "Read prompt, model, and product updates",
+              "url": "/blog",
+              "icon": "Newspaper"
+            },
+            {
+              "title": "Updates",
+              "description": "See new music generator features",
+              "url": "/updates",
+              "icon": "Clock"
+            },
+            {
+              "title": "Docs",
+              "description": "View setup and usage notes",
+              "url": "/docs",
+              "target": "_blank",
+              "icon": "BookOpenText"
+            }
+          ]
+        }
+      ]
+    },
+    "buttons": [],
+    "user_nav": {
+      "show_name": true,
+      "show_credits": true,
+      "show_sign_out": true,
+      "items": [
+        {
+          "title": "Credits",
+          "url": "/settings/credits",
+          "icon": "Coins"
+        },
+        {
+          "title": "Generation History",
+          "url": "/activity/ai-tasks",
+          "icon": "Activity"
+        }
+      ]
+    },
+    "show_sign": true,
+    "show_theme": true,
+    "show_locale": true
+  },
+  "footer": {
+    "id": "footer",
+    "brand": {
+      "title": "Stable Audio Generator",
+      "description": "A dark immersive AI music workspace that turns prompts into playable audio drafts.",
+      "logo": {
+        "src": "/logo.png",
+        "alt": "Stable Audio Generator",
+        "width": 1024,
+        "height": 1024
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "Product",
+          "children": [
+            {
+              "title": "Features",
+              "url": "/#features",
+              "target": "_self"
+            },
+            {
+              "title": "Music Use Cases",
+              "url": "/showcases",
+              "target": "_self"
+            },
+            {
+              "title": "Credit Plans",
+              "url": "/pricing",
+              "target": "_self"
+            },
+            {
+              "title": "Music Generator",
+              "url": "/ai-music-generator",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "Resources",
+          "children": [
+            {
+              "title": "Docs",
+              "url": "/docs",
+              "target": "_self"
+            },
+            {
+              "title": "Blog",
+              "url": "/blog",
+              "target": "_self"
+            },
+            {
+              "title": "Updates",
+              "url": "/updates",
+              "target": "_self"
+            }
+          ]
+        }
+      ]
+    },
+    "social": {
+      "items": [
+        {
+          "title": "X",
+          "icon": "RiTwitterXFill",
+          "url": "https://x.com/your-app-name",
+          "target": "_blank"
+        },
+        {
+          "title": "Github",
+          "icon": "Github",
+          "url": "https://github.com/your-app-name",
+          "target": "_blank"
+        },
+        {
+          "title": "Discord",
+          "icon": "RiDiscordFill",
+          "url": "https://discord.gg/your-app-name",
+          "target": "_blank"
+        },
+        {
+          "title": "Email",
+          "icon": "Mail",
+          "url": "mailto:support@your-domain.com",
+          "target": "_self"
+        }
+      ]
+    },
+    "agreement": {
+      "items": [
+        {
+          "title": "Privacy Policy",
+          "url": "/privacy-policy"
+        },
+        {
+          "title": "Terms of Service",
+          "url": "/terms-of-service"
+        }
+      ]
+    },
+    "show_theme": true,
+    "show_locale": true,
+    "show_built_with": false
+  }
+}

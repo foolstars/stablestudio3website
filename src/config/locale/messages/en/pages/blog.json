@@ -1,0 +1,22 @@
+{
+  "metadata": {
+    "title": "Music Creation Blog",
+    "description": "Read AI music prompt, model test, and audio creation updates."
+  },
+  "page": {
+    "title": "Music Creation Blog",
+    "sections": {
+      "blog": {
+        "id": "blog",
+        "title": "Music Creation Blog",
+        "description": "Read AI music prompt, model test, and audio creation updates."
+      }
+    }
+  },
+  "messages": {
+    "all": "All",
+    "no_content": "No Content",
+    "crumb": "Blog",
+    "toc": "Table of Contents"
+  }
+}

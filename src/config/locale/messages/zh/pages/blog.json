@@ -1,0 +1,22 @@
+{
+  "metadata": {
+    "title": "音乐创作博客",
+    "description": "阅读 AI 音乐提示词、模型测试和声音创作更新。"
+  },
+  "page": {
+    "title": "音乐创作博客",
+    "sections": {
+      "blog": {
+        "id": "blog",
+        "title": "音乐创作博客",
+        "description": "阅读 AI 音乐提示词、模型测试和声音创作更新。"
+      }
+    }
+  },
+  "messages": {
+    "all": "全部",
+    "no_content": "暂无内容",
+    "crumb": "博客",
+    "toc": "目录"
+  }
+}

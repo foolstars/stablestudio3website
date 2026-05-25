@@ -1,0 +1,314 @@
+{
+  "metadata": {
+    "title": "Music Credit Plans",
+    "description": "Choose site credits to test and generate AI music."
+  },
+  "page": {
+    "title": "Music Credit Plans",
+    "sections": {
+      "pricing": {
+        "id": "pricing",
+        "title": "Music Credits",
+        "description": "Site credits control website generation access. Real Stable Audio 3.0 calls still require Stability platform API credits.",
+        "groups": [
+          {
+            "name": "one-time",
+            "title": "One-time Packs"
+          },
+          {
+            "name": "monthly",
+            "title": "Monthly Packs",
+            "is_featured": true,
+            "label": "Good for testing"
+          },
+          {
+            "name": "yearly",
+            "title": "Yearly Packs"
+          }
+        ],
+        "items": [
+          {
+            "title": "Preview Pack",
+            "description": "Best for validating the free test audio and basic flow.",
+            "features_title": "Includes",
+            "features": [
+              "100 site credits",
+              "Valid for 30 days",
+              "AI music generator access",
+              "Free test audio flow",
+              "Generation task records",
+              "Online preview and download"
+            ],
+            "interval": "one-time",
+            "amount": 900,
+            "currency": "USD",
+            "price": "$9",
+            "unit": "",
+            "is_featured": false,
+            "tip": "Site credits control website generations. Stable Audio 3.0 still requires Stability platform API credits.",
+            "button": {
+              "title": "Get Credits",
+              "url": "/#pricing",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "music-trial",
+            "product_name": "Stable Audio Preview Pack",
+            "credits": 100,
+            "valid_days": 30,
+            "group": "one-time"
+          },
+          {
+            "title": "Creator Pack",
+            "description": "Best for testing prompts and music directions over time.",
+            "features_title": "Includes",
+            "features": [
+              "300 site credits",
+              "Valid for 90 days",
+              "AI music generator access",
+              "Free test audio flow",
+              "Generation task records",
+              "Online preview and download"
+            ],
+            "interval": "one-time",
+            "amount": 1900,
+            "currency": "USD",
+            "price": "$19",
+            "unit": "",
+            "is_featured": true,
+            "tip": "Site credits control website generations. Stable Audio 3.0 still requires Stability platform API credits.",
+            "button": {
+              "title": "Get Credits",
+              "url": "/#pricing",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "music-creator",
+            "product_name": "Stable Audio Creator Pack",
+            "credits": 300,
+            "valid_days": 90,
+            "group": "one-time"
+          },
+          {
+            "title": "Studio Pack",
+            "description": "Best for team testing and larger audio drafts.",
+            "features_title": "Includes",
+            "features": [
+              "800 site credits",
+              "Valid for 180 days",
+              "AI music generator access",
+              "Free test audio flow",
+              "Generation task records",
+              "Online preview and download"
+            ],
+            "interval": "one-time",
+            "amount": 3900,
+            "currency": "USD",
+            "price": "$39",
+            "unit": "",
+            "is_featured": false,
+            "tip": "Site credits control website generations. Stable Audio 3.0 still requires Stability platform API credits.",
+            "button": {
+              "title": "Get Credits",
+              "url": "/#pricing",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "music-studio",
+            "product_name": "Stable Audio Studio Pack",
+            "credits": 800,
+            "valid_days": 180,
+            "group": "one-time"
+          },
+          {
+            "title": "Monthly Preview",
+            "description": "Monthly site credits for light testing.",
+            "features_title": "Includes",
+            "features": [
+              "120 site credits",
+              "Valid for 30 days",
+              "AI music generator access",
+              "Free test audio flow",
+              "Generation task records",
+              "Online preview and download"
+            ],
+            "interval": "month",
+            "amount": 700,
+            "currency": "USD",
+            "price": "$7",
+            "unit": "/ mo",
+            "is_featured": false,
+            "tip": "Site credits control website generations. Stable Audio 3.0 still requires Stability platform API credits.",
+            "button": {
+              "title": "Get Credits",
+              "url": "/#pricing",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "music-trial-monthly",
+            "product_name": "Stable Audio Monthly Preview",
+            "credits": 120,
+            "valid_days": 30,
+            "group": "monthly",
+            "plan_name": "Monthly Preview"
+          },
+          {
+            "title": "Creator Pack",
+            "description": "More monthly site credits for ongoing creation.",
+            "features_title": "Includes",
+            "features": [
+              "400 site credits",
+              "Valid for 30 days",
+              "AI music generator access",
+              "Free test audio flow",
+              "Generation task records",
+              "Online preview and download"
+            ],
+            "interval": "month",
+            "amount": 1500,
+            "currency": "USD",
+            "price": "$15",
+            "unit": "/ mo",
+            "is_featured": true,
+            "tip": "Site credits control website generations. Stable Audio 3.0 still requires Stability platform API credits.",
+            "button": {
+              "title": "Get Credits",
+              "url": "/#pricing",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "music-creator-monthly",
+            "product_name": "Stable Audio Creator Pack",
+            "credits": 400,
+            "valid_days": 30,
+            "group": "monthly",
+            "plan_name": "Creator Pack"
+          },
+          {
+            "title": "Monthly Studio",
+            "description": "For teams testing the music generation flow regularly.",
+            "features_title": "Includes",
+            "features": [
+              "1000 site credits",
+              "Valid for 30 days",
+              "AI music generator access",
+              "Free test audio flow",
+              "Generation task records",
+              "Online preview and download"
+            ],
+            "interval": "month",
+            "amount": 2900,
+            "currency": "USD",
+            "price": "$29",
+            "unit": "/ mo",
+            "is_featured": false,
+            "tip": "Site credits control website generations. Stable Audio 3.0 still requires Stability platform API credits.",
+            "button": {
+              "title": "Get Credits",
+              "url": "/#pricing",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "music-studio-monthly",
+            "product_name": "Stable Audio Monthly Studio",
+            "credits": 1000,
+            "valid_days": 30,
+            "group": "monthly",
+            "plan_name": "Monthly Studio"
+          },
+          {
+            "title": "Yearly Preview",
+            "description": "Long-running test credits for the year.",
+            "features_title": "Includes",
+            "features": [
+              "1800 site credits",
+              "Valid for 365 days",
+              "AI music generator access",
+              "Free test audio flow",
+              "Generation task records",
+              "Online preview and download"
+            ],
+            "interval": "year",
+            "amount": 6900,
+            "currency": "USD",
+            "price": "$69",
+            "unit": "/ yr",
+            "is_featured": false,
+            "tip": "Site credits control website generations. Stable Audio 3.0 still requires Stability platform API credits.",
+            "button": {
+              "title": "Get Credits",
+              "url": "/#pricing",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "music-trial-yearly",
+            "product_name": "Stable Audio Yearly Preview",
+            "credits": 1800,
+            "valid_days": 365,
+            "group": "yearly",
+            "plan_name": "Yearly Preview"
+          },
+          {
+            "title": "Yearly Creator",
+            "description": "For year-round music idea iteration.",
+            "features_title": "Includes",
+            "features": [
+              "6000 site credits",
+              "Valid for 365 days",
+              "AI music generator access",
+              "Free test audio flow",
+              "Generation task records",
+              "Online preview and download"
+            ],
+            "interval": "year",
+            "amount": 14900,
+            "currency": "USD",
+            "price": "$149",
+            "unit": "/ yr",
+            "is_featured": false,
+            "tip": "Site credits control website generations. Stable Audio 3.0 still requires Stability platform API credits.",
+            "button": {
+              "title": "Get Credits",
+              "url": "/#pricing",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "music-creator-yearly",
+            "product_name": "Stable Audio Yearly Creator",
+            "credits": 6000,
+            "valid_days": 365,
+            "group": "yearly",
+            "plan_name": "Yearly Creator"
+          },
+          {
+            "title": "Yearly Studio",
+            "description": "For teams and content studios using the product long-term.",
+            "features_title": "Includes",
+            "features": [
+              "16000 site credits",
+              "Valid for 365 days",
+              "AI music generator access",
+              "Free test audio flow",
+              "Generation task records",
+              "Online preview and download"
+            ],
+            "interval": "year",
+            "amount": 29900,
+            "currency": "USD",
+            "price": "$299",
+            "unit": "/ yr",
+            "is_featured": false,
+            "tip": "Site credits control website generations. Stable Audio 3.0 still requires Stability platform API credits.",
+            "button": {
+              "title": "Get Credits",
+              "url": "/#pricing",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "music-studio-yearly",
+            "product_name": "Stable Audio Yearly Studio",
+            "credits": 16000,
+            "valid_days": 365,
+            "group": "yearly",
+            "plan_name": "Yearly Studio"
+          }
+        ]
+      }
+    }
+  },
+  "messages": {
+    "current_plan": "Current Plan",
+    "processing": "Processing"
+  }
+}

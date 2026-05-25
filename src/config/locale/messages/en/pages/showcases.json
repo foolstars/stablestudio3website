@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "title": "Music Use Cases",
+    "description": "Creative scenarios for the AI music generator"
+  },
+  "page": {
+    "title": "Music Use Cases",
+    "sections": {
+      "showcases": {
+        "id": "showcases",
+        "title": "Create audio drafts for these music scenarios",
+        "description": "From short-form video to podcast intros, use prompts to find a musical direction quickly.",
+        "groups": [
+          {
+            "name": "all",
+            "title": "All Use Cases"
+          },
+          {
+            "name": "video",
+            "title": "Video"
+          },
+          {
+            "name": "podcast",
+            "title": "Podcast"
+          },
+          {
+            "name": "game",
+            "title": "Game"
+          },
+          {
+            "name": "ambient",
+            "title": "Ambient"
+          },
+          {
+            "name": "commercial",
+            "title": "Commercial"
+          }
+        ],
+        "items": [
+          {
+            "title": "Short-form Video Backgrounds",
+            "description": "Generate rhythmic music demos based on scene mood and pacing.",
+            "url": "/ai-music-generator",
+            "target": "_self",
+            "group": "video"
+          },
+          {
+            "title": "Podcast Intros",
+            "description": "Draft intros, transitions, and outros for a show identity.",
+            "url": "/ai-music-generator",
+            "target": "_self",
+            "group": "podcast"
+          },
+          {
+            "title": "Game Music Loops",
+            "description": "Describe a level atmosphere and create loopable music ideas.",
+            "url": "/ai-music-generator",
+            "target": "_self",
+            "group": "game"
+          },
+          {
+            "title": "Meditation and Sleep Ambience",
+            "description": "Generate soft, slow, spacious ambient sound ideas.",
+            "url": "/ai-music-generator",
+            "target": "_self",
+            "group": "ambient"
+          },
+          {
+            "title": "Ad Pitch Music",
+            "description": "Create a few audio mood boards during proposal work.",
+            "url": "/ai-music-generator",
+            "target": "_self",
+            "group": "commercial"
+          },
+          {
+            "title": "Product Demo Sound",
+            "description": "Draft sounds for product videos, launch pages, and brand films.",
+            "url": "/ai-music-generator",
+            "target": "_self",
+            "group": "commercial"
+          }
+        ]
+      }
+    },
+    "description": "Music and audio scenarios for AI music generation"
+  }
+}
