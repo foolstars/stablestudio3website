@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "title": "AI 音乐生成器",
+    "description": "把情绪、风格、速度和乐器描述转换成可播放的 AI 音频。"
+  },
+  "page": {
+    "title": "AI 音乐生成器",
+    "description": "输入音乐方向、情绪、速度和乐器，快速生成可播放的 AI 音频。"
+  },
+  "generator": {
+    "title": "音乐生成器",
+    "prompt": "提示词",
+    "prompt_placeholder": "一段温暖的 lo-fi 电子音乐，90bpm，柔和鼓点，夜晚城市氛围，适合短视频配乐",
+    "generate": "生成音乐",
+    "loading": "加载中...",
+    "generating": "生成中...",
+    "sign_in_to_generate": "登录后生成音乐",
+    "credits_cost": "消耗 {credits} 积分",
+    "credits_remaining": "剩余 {credits} 积分",
+    "buy_credits": "购买积分",
+    "generation_progress": "生成进度",
+    "time_cost": "测试模式会很快完成。Stable Audio 3.0 可能需要 2-3 分钟...",
+    "generated_song": "生成结果",
+    "ready_to_play": "可播放",
+    "audio_generating": "音频生成中...",
+    "generating_song": "正在生成音乐...",
+    "waiting_generation": "请稍等，正在创作音频",
+    "no_song_generated": "暂无生成结果",
+    "downloading": "下载中...",
+    "download_success": "下载完成",
+    "download_failed": "音频下载失败",
+    "errors": {
+      "timeout": "音乐生成超时，请重试。",
+      "query_failed": "查询任务信息失败",
+      "generate_failed": "音乐生成失败",
+      "create_failed": "创建音乐失败：{message}",
+      "insufficient_credits": "积分不足",
+      "invalid_provider": "生成服务或模型无效",
+      "title_style_required": "请输入标题和音乐风格",
+      "lyrics_required": "请输入歌词",
+      "prompt_required": "请输入提示词",
+      "request_failed": "请求失败，状态码：{status}",
+      "fetch_audio_failed": "获取音频文件失败"
+    },
+    "form": {
+      "custom_mode": "自定义模式",
+      "title": "标题",
+      "title_placeholder": "夜色里的回声",
+      "style": "音乐风格",
+      "style_placeholder": "独立电子、合成器、120bpm、轻微失真",
+      "instrumental": "纯音乐",
+      "prompt": "提示词",
+      "prompt_placeholder": "温暖的 lo-fi 电子音乐，90bpm，柔和鼓点，夜晚城市氛围，适合短视频配乐",
+      "provider": "生成服务",
+      "provider_test": "免费测试音频",
+      "provider_stability": "Stable Audio 3.0",
+      "model": "模型",
+      "model_test": "免费测试音频",
+      "model_stability": "Stable Audio 3.0",
+      "lyrics": "歌词",
+      "lyrics_placeholder": "输入歌词，建议两段主歌共 8 行左右，效果更稳定"
+    }
+  }
+}

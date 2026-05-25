@@ -129,7 +129,7 @@ export function MusicGenerator({ className, srOnlyTitle }: SongGeneratorProps) {
           setProgress(0);
           setIsGenerating(false);
           setGenerationStartTime(null);
-          toast.error('Generate music timed out. Please try again.');
+          toast.error(t('generator.errors.timeout'));
           return true; // Stop polling
         }
       }
@@ -144,7 +144,9 @@ export function MusicGenerator({ className, srOnlyTitle }: SongGeneratorProps) {
       });
 
       if (!resp.ok) {
-        throw new Error(`request failed with status: ${resp.status}`);
+        throw new Error(
+          t('generator.errors.request_failed', { status: resp.status })
+        );
       }
 
       const { code, message, data } = await resp.json();
@@ -154,7 +156,7 @@ export function MusicGenerator({ className, srOnlyTitle }: SongGeneratorProps) {
 
       const { status, taskInfo } = data;
       if (!status || !taskInfo) {
-        throw new Error('Query task info failed');
+        throw new Error(t('generator.errors.query_failed'));
       }
 
       const task = JSON.parse(taskInfo);
@@ -201,7 +203,7 @@ export function MusicGenerator({ className, srOnlyTitle }: SongGeneratorProps) {
         setProgress(0);
         setIsGenerating(false);
         setGenerationStartTime(null);
-        toast.error('Generate music failed: ' + errorMessage);
+        toast.error(`${t('generator.errors.generate_failed')}: ${errorMessage}`);
 
         fetchUserCredits();
 
@@ -226,7 +228,7 @@ export function MusicGenerator({ className, srOnlyTitle }: SongGeneratorProps) {
       setIsGenerating(false);
       setProgress(0);
       setGenerationStartTime(null);
-      toast.error('Create song failed: ' + error.message);
+      toast.error(t('generator.errors.create_failed', { message: error.message }));
 
       fetchUserCredits();
 
@@ -255,7 +257,7 @@ export function MusicGenerator({ className, srOnlyTitle }: SongGeneratorProps) {
     }
 
     if (!user.credits || user.credits.remainingCredits < costCredits) {
-      toast.error('Insufficient credits');
+      toast.error(t('generator.errors.insufficient_credits'));
       return;
     }
 
@@ -263,22 +265,22 @@ export function MusicGenerator({ className, srOnlyTitle }: SongGeneratorProps) {
       provider === 'stability' ? 'stable-audio-3' : 'free-test-audio';
 
     if (!provider || !selectedModel) {
-      toast.error('Invalid provider or model');
+      toast.error(t('generator.errors.invalid_provider'));
       return;
     }
 
     if (customMode) {
       if (!title || !style) {
-        toast.error('Please enter title and style');
+        toast.error(t('generator.errors.title_style_required'));
         return;
       }
       if (!instrumental && !lyrics) {
-        toast.error('Please enter lyrics');
+        toast.error(t('generator.errors.lyrics_required'));
         return;
       }
     } else {
       if (!prompt) {
-        toast.error('Please enter prompt');
+        toast.error(t('generator.errors.prompt_required'));
         return;
       }
     }
@@ -337,17 +339,19 @@ export function MusicGenerator({ className, srOnlyTitle }: SongGeneratorProps) {
       });
 
       if (!resp.ok) {
-        throw new Error(`request failed with status: ${resp.status}`);
+        throw new Error(
+          t('generator.errors.request_failed', { status: resp.status })
+        );
       }
 
       const { code, message, data } = await resp.json();
       if (code !== 0) {
-        throw new Error(message || 'Failed to generate music');
+        throw new Error(message || t('generator.errors.generate_failed'));
       }
 
       const { id: taskId } = data;
       if (!taskId) {
-        throw new Error('Failed to generate music');
+        throw new Error(t('generator.errors.generate_failed'));
       }
 
       // refresh user credits
@@ -356,7 +360,7 @@ export function MusicGenerator({ className, srOnlyTitle }: SongGeneratorProps) {
       setTaskId(taskId);
       setProgress(20);
     } catch (err: any) {
-      toast.error('Failed to generate music: ' + err.message);
+      toast.error(`${t('generator.errors.generate_failed')}: ${err.message}`);
       setIsGenerating(false);
       setProgress(0);
       setGenerationStartTime(null);
@@ -425,7 +429,7 @@ export function MusicGenerator({ className, srOnlyTitle }: SongGeneratorProps) {
         `/api/proxy/file?url=${encodeURIComponent(song.audioUrl)}`
       );
       if (!response.ok) {
-        throw new Error('Failed to fetch audio file');
+        throw new Error(t('generator.errors.fetch_audio_failed'));
       }
 
       // Convert to blob
@@ -498,13 +502,13 @@ export function MusicGenerator({ className, srOnlyTitle }: SongGeneratorProps) {
                       <SelectContent>
                         {provider === 'test-audio' && (
                           <SelectItem value="free-test-audio">
-                            Free Test Audio
+                            {t('generator.form.model_test')}
                           </SelectItem>
                         )}
                         {provider === 'stability' && (
-                        <SelectItem value="stable-audio-3">
-                          Stable Audio 3.0
-                        </SelectItem>
+                          <SelectItem value="stable-audio-3">
+                            {t('generator.form.model_stability')}
+                          </SelectItem>
                         )}
                       </SelectContent>
                     </Select>

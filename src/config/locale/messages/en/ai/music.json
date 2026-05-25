@@ -29,6 +29,19 @@
     "downloading": "Downloading...",
     "download_success": "Download completed successfully",
     "download_failed": "Failed to download audio",
+    "errors": {
+      "timeout": "Generate music timed out. Please try again.",
+      "query_failed": "Query task info failed",
+      "generate_failed": "Generate music failed",
+      "create_failed": "Create song failed: {message}",
+      "insufficient_credits": "Insufficient credits",
+      "invalid_provider": "Invalid provider or model",
+      "title_style_required": "Please enter title and style",
+      "lyrics_required": "Please enter lyrics",
+      "prompt_required": "Please enter prompt",
+      "request_failed": "request failed with status: {status}",
+      "fetch_audio_failed": "Failed to fetch audio file"
+    },
     "form": {
       "custom_mode": "Custom Mode",
       "title": "Title",
@@ -42,6 +55,8 @@
       "provider_test": "Free Test Audio",
       "provider_stability": "Stable Audio 3.0",
       "model": "Model",
+      "model_test": "Free Test Audio",
+      "model_stability": "Stable Audio 3.0",
       "lyrics": "Lyrics",
       "lyrics_placeholder": "Write your own lyrics, two verses (8 lines) for the best result"
     }

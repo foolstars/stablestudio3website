@@ -1,4 +1,4 @@
-import { revalidateTag, unstable_cache } from 'next/cache';
+import { revalidateTag } from 'next/cache';
 
 import { db } from '@/core/db';
 import { envConfigs } from '@/config';
@@ -71,35 +71,28 @@ export async function addConfig(newConfig: NewConfig) {
   return result;
 }
 
-export const getConfigs = unstable_cache(
-  async (): Promise<Configs> => {
-    const configs: Record<string, string> = {};
+export async function getConfigs(): Promise<Configs> {
+  const configs: Record<string, string> = {};
 
-    // D1 is only available inside Cloudflare Workers runtime (not during build)
-    if (envConfigs.database_provider === 'd1' && !isCloudflareWorker) {
-      return configs;
-    }
-    if (!envConfigs.database_url && envConfigs.database_provider !== 'd1') {
-      return configs;
-    }
-
-    const result = await db().select().from(config);
-    if (!result) {
-      return configs;
-    }
-
-    for (const config of result) {
-      configs[config.name] = config.value ?? '';
-    }
-
+  // D1 is only available inside Cloudflare Workers runtime (not during build)
+  if (envConfigs.database_provider === 'd1' && !isCloudflareWorker) {
     return configs;
-  },
-  ['configs'],
-  {
-    revalidate: 3600,
-    tags: [CACHE_TAG_CONFIGS],
   }
-);
+  if (!envConfigs.database_url && envConfigs.database_provider !== 'd1') {
+    return configs;
+  }
+
+  const result = await db().select().from(config);
+  if (!result) {
+    return configs;
+  }
+
+  for (const config of result) {
+    configs[config.name] = config.value ?? '';
+  }
+
+  return configs;
+}
 
 export async function getAllConfigs(): Promise<Configs> {
   let dbConfigs: Configs = {};

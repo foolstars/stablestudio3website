@@ -59,14 +59,21 @@ export async function proxy(request: NextRequest) {
   intlResponse.headers.set('x-pathname', request.nextUrl.pathname);
   intlResponse.headers.set('x-url', request.url);
 
-  // Remove Set-Cookie from public pages to allow caching
-  // We exclude settings, activity, and auth pages from this behavior
+  const isCopyDrivenPage =
+    pathWithoutLocale === '' ||
+    pathWithoutLocale === '/' ||
+    pathWithoutLocale === '/pricing' ||
+    pathWithoutLocale === '/ai-music-generator';
+
+  // Remove Set-Cookie from public pages to allow caching.
+  // Copy-driven pages read operator-managed DB content, so they must stay fresh.
   if (
     !pathWithoutLocale.startsWith('/settings') &&
     !pathWithoutLocale.startsWith('/activity') &&
     !pathWithoutLocale.startsWith('/ops') &&
     !pathWithoutLocale.startsWith('/sign-') &&
-    !pathWithoutLocale.startsWith('/auth')
+    !pathWithoutLocale.startsWith('/auth') &&
+    !isCopyDrivenPage
   ) {
     intlResponse.headers.delete('Set-Cookie');
 

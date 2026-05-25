@@ -55,6 +55,28 @@ const copyFields: {
     type: 'textarea',
   },
   {
+    key: 'seo_music_title',
+    label: '音乐生成器 SEO 标题',
+    description: '开始生成页面的浏览器标题和搜索标题。',
+  },
+  {
+    key: 'seo_music_description',
+    label: '音乐生成器 SEO 描述',
+    description: '开始生成页面的搜索结果和分享描述。',
+    type: 'textarea',
+  },
+  {
+    key: 'seo_music_page_title',
+    label: '音乐生成器页面标题',
+    description: '开始生成页面正文顶部标题。',
+  },
+  {
+    key: 'seo_music_page_description',
+    label: '音乐生成器页面描述',
+    description: '开始生成页面正文顶部描述。',
+    type: 'textarea',
+  },
+  {
     key: 'seo_pricing_title',
     label: '价格页 SEO 标题',
     description: '价格页浏览器标题和搜索标题。',
@@ -92,10 +114,12 @@ async function saveCopy(formData: FormData) {
 
   await saveConfigs(values);
   revalidatePath('/');
+  revalidatePath('/ai-music-generator');
   revalidatePath('/pricing');
   revalidatePath('/ops/copy');
   locales.forEach((locale) => {
     revalidatePath(`/${locale}`);
+    revalidatePath(`/${locale}/ai-music-generator`);
     revalidatePath(`/${locale}/pricing`);
     revalidatePath(`/${locale}/ops/copy`);
   });
@@ -135,7 +159,7 @@ export default async function OpsCopyPage({
         <CardHeader>
           <CardTitle>运营测试文案</CardTitle>
           <CardDescription>
-            留空会使用代码里的默认文案；这里只影响已接入的首页和价格页。
+            留空会使用代码里的默认文案；这里只影响已接入的首页、音乐生成器页和价格页。
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -168,6 +192,11 @@ export default async function OpsCopyPage({
               <Button asChild type="button" variant="outline">
                 <a href="/" target="_blank">
                   查看首页
+                </a>
+              </Button>
+              <Button asChild type="button" variant="outline">
+                <a href="/ai-music-generator" target="_blank">
+                  查看生成器
                 </a>
               </Button>
               <Button asChild type="button" variant="outline">

@@ -8,7 +8,8 @@ import { getUserInfo } from '@/shared/models/user';
 import { applyPricingSeoCopy } from '@/shared/services/seo-copy';
 import { DynamicPage } from '@/shared/types/blocks/landing';
 
-export const revalidate = 3600;
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 export const generateMetadata = getSeoCopyMetadata({
   titleKey: 'seo_pricing_title',
