@@ -35,7 +35,8 @@ export async function proxy(request: NextRequest) {
   // Only check authentication for private account routes
   if (
     pathWithoutLocale.startsWith('/settings') ||
-    pathWithoutLocale.startsWith('/activity')
+    pathWithoutLocale.startsWith('/activity') ||
+    pathWithoutLocale.startsWith('/ops')
   ) {
     // Check if session cookie exists
     const sessionCookie = getSessionCookie(request);
@@ -63,6 +64,7 @@ export async function proxy(request: NextRequest) {
   if (
     !pathWithoutLocale.startsWith('/settings') &&
     !pathWithoutLocale.startsWith('/activity') &&
+    !pathWithoutLocale.startsWith('/ops') &&
     !pathWithoutLocale.startsWith('/sign-') &&
     !pathWithoutLocale.startsWith('/auth')
   ) {

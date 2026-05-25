@@ -9,7 +9,6 @@ import {
   LocaleSelector,
   SignUser,
   SmartIcon,
-  ThemeToggler,
 } from '@/shared/blocks/common';
 import {
   Accordion,
@@ -287,7 +286,7 @@ export function Header({ header }: { header: HeaderType }) {
                 <MobileMenu closeMenu={() => setIsMobileMenuOpen(false)} />
               )}
 
-              {/* Header right section: theme toggler, locale selector, sign, buttons */}
+              {/* Header right section: locale selector, sign, buttons */}
               <div className="mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 in-data-[state=active]:flex max-lg:in-data-[state=active]:mt-6 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent">
                 <div className="flex w-full flex-row items-center gap-4 sm:flex-row sm:gap-6 sm:space-y-0 md:w-fit">
                   {header.buttons &&
@@ -314,9 +313,6 @@ export function Header({ header }: { header: HeaderType }) {
                       </Link>
                     ))}
 
-                  {header.show_theme ? (
-                    <ThemeToggler className="text-white" />
-                  ) : null}
                   {header.show_locale ? (
                     <LocaleSelector className="text-white hover:bg-white/10 hover:text-white" />
                   ) : null}

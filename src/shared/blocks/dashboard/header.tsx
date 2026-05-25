@@ -1,11 +1,7 @@
 import { Fragment } from 'react';
 
 import { Link } from '@/core/i18n/navigation';
-import {
-  LocaleSelector,
-  SmartIcon,
-  ThemeToggler,
-} from '@/shared/blocks/common';
+import { LocaleSelector, SmartIcon } from '@/shared/blocks/common';
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -24,7 +20,7 @@ export function Header({
   crumbs,
   buttons,
   show_locale,
-  show_theme,
+  show_theme: _show_theme,
 }: {
   title?: string;
   crumbs?: Crumb[];
@@ -83,7 +79,6 @@ export function Header({
               ))}
             </div>
           )}
-          {show_theme && <ThemeToggler />}
           {show_locale !== false && <LocaleSelector type="button" />}
         </div>
       </div>
