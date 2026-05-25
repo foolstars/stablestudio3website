@@ -103,7 +103,7 @@ export function Blog({
                           {item.author_image && (
                             <Avatar>
                               <AvatarImage
-                                src={item.author_image || ''}
+                                src={item.author_image}
                                 alt={item.author_name || ''}
                                 className="size-6 rounded-full"
                               />

@@ -15,11 +15,9 @@ export default function robots(): MetadataRoute.Robots {
         '/terms-of-service',
         '/settings/*',
         '/activity/*',
-        '/admin/*',
         '/api/*',
       ],
     },
     sitemap: `${appUrl}/sitemap.xml`,
   };
 }
-

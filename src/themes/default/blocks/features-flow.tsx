@@ -51,12 +51,15 @@ export function FeaturesFlow({ section }: { section: Section }) {
       <div className="container flex flex-col items-center justify-center space-y-8 px-6 md:space-y-16">
         {section.items.map((item, index) => {
           const isImageRight = item.image_position === 'right';
+          const hasImage = Boolean(item.image?.src);
           return (
             <motion.div
               key={index}
               className={cn(
-                'grid items-center gap-6 py-16 sm:grid-cols-2 md:gap-12 lg:gap-24',
-                isImageRight &&
+                'grid items-center gap-6 py-16 md:gap-12 lg:gap-24',
+                hasImage && 'sm:grid-cols-2',
+                hasImage &&
+                  isImageRight &&
                   'sm:[&>*:first-child]:order-2 sm:[&>*:last-child]:order-1'
               )}
               initial={{
@@ -74,22 +77,24 @@ export function FeaturesFlow({ section }: { section: Section }) {
                 ease: [0.22, 1, 0.36, 1] as const,
               }}
             >
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.5,
-                  delay: index * 0.15 + 0.2,
-                  ease: [0.22, 1, 0.36, 1] as const,
-                }}
-              >
-                <LazyImage
-                  src={item.image?.src ?? ''}
-                  className="rounded-2xl"
-                  alt={item.image?.alt ?? ''}
-                />
-              </motion.div>
+              {hasImage && (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.5,
+                    delay: index * 0.15 + 0.2,
+                    ease: [0.22, 1, 0.36, 1] as const,
+                  }}
+                >
+                  <LazyImage
+                    src={item.image?.src || ''}
+                    className="rounded-2xl"
+                    alt={item.image?.alt ?? ''}
+                  />
+                </motion.div>
+              )}
 
               <motion.div
                 className="relative space-y-4"

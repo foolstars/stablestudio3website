@@ -1,7 +1,6 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 import { Link } from '@/core/i18n/navigation';
@@ -115,6 +114,7 @@ export function Showcases({
         {filteredItems.length > 0 ? (
           filteredItems.map((item, index) => {
             const hasButton = !!(item as any).button;
+            const hasImage = Boolean(item.image?.src);
             const cardContent = (
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -128,19 +128,19 @@ export function Showcases({
               >
                 <Card className="dark:hover:shadow-primary/10 overflow-hidden p-0 transition-all hover:shadow-lg">
                   <CardContent className="p-0">
-                    <motion.div
-                      className="relative aspect-16/10 w-full overflow-hidden"
-                      whileHover={{ scale: 1.05 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <Image
-                        src={item.image?.src ?? ''}
-                        alt={item.image?.alt ?? ''}
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        fill
-                        className="rounded-t-lg object-cover transition-transform duration-300"
-                      />
-                    </motion.div>
+                    {hasImage && (
+                      <motion.div
+                        className="relative w-full overflow-hidden"
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        <img
+                          src={item.image?.src}
+                          alt={item.image?.alt ?? ''}
+                          className="h-auto w-full rounded-t-lg object-cover transition-transform duration-300"
+                        />
+                      </motion.div>
+                    )}
                     <div className="p-6">
                       <h3 className="mb-2 line-clamp-1 text-xl font-semibold text-balance">
                         {item.title}

@@ -167,7 +167,7 @@
           },
           {
             "title": "Task Records",
-            "description": "Review generation tasks, statuses, and credit costs in the admin area.",
+            "description": "Review generation tasks, statuses, and credit costs from the activity page.",
             "icon": "RiListCheck3"
           },
           {
@@ -254,7 +254,7 @@
           },
           {
             "question": "Why does Stable Audio 3.0 say insufficient credits?",
-            "answer": "Stable Audio 3.0 consumes Stability platform credits. Those are separate from your site credits in the admin area."
+            "answer": "Stable Audio 3.0 consumes Stability platform credits. Those are separate from the site credits shown in your account."
           },
           {
             "question": "How should I write prompts?",

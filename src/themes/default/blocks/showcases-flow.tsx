@@ -162,64 +162,110 @@ export function ShowcasesFlow({
 
       {filteredItems.length > 0 ? (
         <div className="container mx-auto columns-1 gap-4 space-y-4 sm:columns-2 lg:columns-3 xl:columns-4">
-          {filteredItems.map((item, index) => (
-            <motion.div
-              key={index}
-              className="group relative cursor-zoom-in break-inside-avoid overflow-hidden rounded-xl"
-              onClick={() => setSelectedIndex(index)}
-              initial={{ opacity: 0, y: 30, scale: 0.95 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              viewport={{ once: true, margin: '-50px' }}
-              transition={{
-                duration: 0.6,
-                delay: index * 0.1,
-                ease: [0.22, 1, 0.36, 1] as const,
-              }}
-              whileHover={{ scale: 1.02 }}
-            >
-              <LazyImage
-                src={item.image?.src ?? ''}
-                alt={item.image?.alt ?? ''}
-                className="h-auto w-full transition-transform duration-300 group-hover:scale-105"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-              />
-              <div className="absolute inset-0 flex flex-col justify-end bg-black/60 p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                <h3 className="mb-2 translate-y-4 text-sm font-medium text-white transition-transform duration-300 group-hover:translate-y-0">
-                  {item.title}
-                </h3>
-                {/* {item.description && (
-                  <p className="line-clamp-2 translate-y-4 text-sm text-white/80 transition-transform delay-75 duration-300 group-hover:translate-y-0">
-                    {item.description}
-                  </p>
-                )} */}
-                {(item as any).button && (
-                  <div
-                    className="mt-3 translate-y-4 transition-transform delay-100 duration-300 group-hover:translate-y-0"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    <Button
-                      asChild
-                      variant={(item as any).button.variant || 'default'}
-                      size={(item as any).button.size || 'sm'}
-                      className="bg-primary hover:bg-primary/90 text-primary-foreground h-8 w-full border-0 px-1 py-1.5 text-sm font-medium"
-                    >
-                      <Link
-                        href={(item as any).button.url || ''}
-                        target={(item as any).button.target || '_self'}
+          {filteredItems.map((item, index) => {
+            const hasImage = Boolean(item.image?.src);
+
+            return (
+              <motion.div
+                key={index}
+                className={cn(
+                  'group relative break-inside-avoid overflow-hidden rounded-xl',
+                  hasImage
+                    ? 'cursor-zoom-in'
+                    : 'bg-card/60 border border-white/10 p-6 text-white'
+                )}
+                onClick={() => {
+                  if (hasImage) setSelectedIndex(index);
+                }}
+                initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{
+                  duration: 0.6,
+                  delay: index * 0.1,
+                  ease: [0.22, 1, 0.36, 1] as const,
+                }}
+                whileHover={{ scale: hasImage ? 1.02 : 1 }}
+              >
+                {hasImage ? (
+                  <>
+                    <LazyImage
+                      src={item.image?.src || ''}
+                      alt={item.image?.alt ?? ''}
+                      className="h-auto w-full transition-transform duration-300 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                    />
+                    <div className="absolute inset-0 flex flex-col justify-end bg-black/60 p-6 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                      <h3 className="mb-2 translate-y-4 text-sm font-medium text-white transition-transform duration-300 group-hover:translate-y-0">
+                        {item.title}
+                      </h3>
+                      {(item as any).button && (
+                        <div
+                          className="mt-3 translate-y-4 transition-transform delay-100 duration-300 group-hover:translate-y-0"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <Button
+                            asChild
+                            variant={(item as any).button.variant || 'default'}
+                            size={(item as any).button.size || 'sm'}
+                            className="bg-primary hover:bg-primary/90 h-8 w-full border-0 px-1 py-1.5 text-sm font-medium text-white"
+                          >
+                            <Link
+                              href={(item as any).button.url || ''}
+                              target={(item as any).button.target || '_self'}
+                            >
+                              {(item as any).button.icon && (
+                                <SmartIcon
+                                  name={(item as any).button.icon as string}
+                                  className="text-white"
+                                />
+                              )}
+                              {(item as any).button.title}
+                            </Link>
+                          </Button>
+                        </div>
+                      )}
+                    </div>
+                  </>
+                ) : (
+                  <div className="space-y-3">
+                    <h3 className="text-lg font-semibold text-white">
+                      {item.title}
+                    </h3>
+                    {item.description && (
+                      <p
+                        className="text-sm text-white/75"
+                        dangerouslySetInnerHTML={{
+                          __html: item.description,
+                        }}
+                      />
+                    )}
+                    {(item as any).button && (
+                      <Button
+                        asChild
+                        variant={(item as any).button.variant || 'default'}
+                        size={(item as any).button.size || 'sm'}
+                        className="bg-primary hover:bg-primary/90 h-8 border-0 px-3 py-1.5 text-sm font-medium text-white"
                       >
-                        {(item as any).button.icon && (
-                          <SmartIcon
-                            name={(item as any).button.icon as string}
-                          />
-                        )}
-                        {(item as any).button.title}
-                      </Link>
-                    </Button>
+                        <Link
+                          href={(item as any).button.url || ''}
+                          target={(item as any).button.target || '_self'}
+                        >
+                          {(item as any).button.icon && (
+                            <SmartIcon
+                              name={(item as any).button.icon as string}
+                              className="text-white"
+                            />
+                          )}
+                          {(item as any).button.title}
+                        </Link>
+                      </Button>
+                    )}
                   </div>
                 )}
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            );
+          })}
         </div>
       ) : (
         <motion.div
@@ -236,7 +282,8 @@ export function ShowcasesFlow({
       <AnimatePresence>
         {selectedIndex !== null &&
           filteredItems &&
-          filteredItems.length > 0 && (
+          filteredItems.length > 0 &&
+          filteredItems[selectedIndex].image?.src && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -282,7 +329,7 @@ export function ShowcasesFlow({
               >
                 <div className="relative max-h-full max-w-full overflow-hidden rounded-lg">
                   <LazyImage
-                    src={filteredItems[selectedIndex].image?.src ?? ''}
+                    src={filteredItems[selectedIndex].image?.src || ''}
                     alt={filteredItems[selectedIndex].image?.alt ?? ''}
                     className="h-auto max-h-[90vh] w-auto max-w-full object-contain"
                   />

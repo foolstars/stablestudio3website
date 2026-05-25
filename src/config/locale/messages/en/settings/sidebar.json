@@ -21,11 +21,6 @@
         "title": "Credits",
         "url": "/settings/credits",
         "icon": "Coins"
-      },
-      {
-        "title": "API Keys",
-        "url": "/settings/apikeys",
-        "icon": "RiKeyLine"
       }
     ]
   },
@@ -33,12 +28,12 @@
     "items": [
       {
         "title": "Activity",
-        "url": "/activity",
+        "url": "/activity/ai-tasks",
         "icon": "Activity"
       },
       {
         "title": "Settings",
-        "url": "/settings",
+        "url": "/settings/profile",
         "icon": "Settings"
       }
     ]

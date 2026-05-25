@@ -12,16 +12,18 @@ export function Testimonials({
   className?: string;
 }) {
   const TestimonialCard = ({ item }: { item: SectionItem }) => {
+    const mediaSrc = item.image?.src || item.avatar?.src;
+
     return (
       <div className="bg-card/25 ring-foreground/[0.07] flex flex-col justify-end gap-6 rounded-(--radius) border border-transparent p-8 ring-1">
         <p className='text-foreground self-end text-balance before:mr-1 before:content-["\201C"] after:ml-1 after:content-["\201D"]'>
           {item.quote || item.description}
         </p>
         <div className="flex items-center gap-3">
-          {(item.image?.src || item.avatar?.src) && (
+          {mediaSrc && (
             <div className="ring-foreground/10 aspect-square size-9 overflow-hidden rounded-lg border border-transparent shadow-md ring-1 shadow-black/15">
               <LazyImage
-                src={item.image?.src || item.avatar?.src || ''}
+                src={mediaSrc}
                 alt={item.image?.alt || item.avatar?.alt || item.name || ''}
                 className="h-full w-full object-cover"
               />

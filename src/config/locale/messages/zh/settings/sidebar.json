@@ -21,11 +21,6 @@
         "title": "积分",
         "url": "/settings/credits",
         "icon": "Coins"
-      },
-      {
-        "title": "API 密钥",
-        "url": "/settings/apikeys",
-        "icon": "RiKeyLine"
       }
     ]
   },
@@ -33,12 +28,12 @@
     "items": [
       {
         "title": "活动",
-        "url": "/activity",
+        "url": "/activity/ai-tasks",
         "icon": "Activity"
       },
       {
         "title": "设置",
-        "url": "/settings",
+        "url": "/settings/profile",
         "icon": "Settings"
       }
     ]

@@ -1,9 +1,9 @@
 {
-  "title": "活动",
+  "title": "Activity",
   "nav": {
     "items": [
       {
-        "title": "AI 任务",
+        "title": "AI Tasks",
         "url": "/activity/ai-tasks",
         "icon": "RiTaskLine"
       }
@@ -12,12 +12,12 @@
   "top_nav": {
     "items": [
       {
-        "title": "活动",
+        "title": "Activity",
         "url": "/activity/ai-tasks",
         "icon": "Activity"
       },
       {
-        "title": "设置",
+        "title": "Settings",
         "url": "/settings/profile",
         "icon": "Settings"
       }
