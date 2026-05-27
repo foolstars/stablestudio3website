@@ -14,11 +14,11 @@ export const generateMetadata = getSeoCopyMetadata({
   titleKey: 'seo_music_title',
   descriptionKey: 'seo_music_description',
   fallbackTitle: {
-    en: 'AI Music Generator',
+    en: 'Stable Audio 3 Music Generator',
     zh: 'AI 音乐生成器',
   },
   fallbackDescription: {
-    en: 'Turn musical direction, mood, tempo, and instruments into playable AI audio.',
+    en: 'Generate AI music with Stable Audio 3. Write prompts for songs, loops, background music, and text to audio drafts you can preview and download.',
     zh: '输入音乐方向、情绪、速度和乐器，快速生成可播放的 AI 音频。',
   },
   canonicalUrl: '/ai-music-generator',

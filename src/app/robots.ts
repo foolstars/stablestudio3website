@@ -9,14 +9,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: [
-        '/*?*q=',
-        '/privacy-policy',
-        '/terms-of-service',
-        '/settings/*',
-        '/activity/*',
-        '/api/*',
-      ],
+      disallow: ['/*?*q=', '/settings/*', '/activity/*', '/api/*'],
     },
     sitemap: `${appUrl}/sitemap.xml`,
   };

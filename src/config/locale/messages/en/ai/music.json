@@ -1,17 +1,17 @@
 {
   "metadata": {
-    "title": "AI Music Generator",
-    "description": "Turn mood, genre, tempo, and instruments into playable AI audio."
+    "title": "Stable Audio 3 Music Generator",
+    "description": "Generate AI music with Stable Audio 3. Write prompts for songs, loops, background music, and text to audio drafts you can preview and download."
   },
   "page": {
-    "title": "AI Music Generator",
-    "description": "Turn mood, genre, tempo, and instruments into playable AI audio."
+    "title": "Stable Audio 3 Music Generator",
+    "description": "Use Stable Audio 3 to turn genre, mood, BPM, instruments, and lyrics into playable AI music drafts."
   },
   "generator": {
-    "title": "Music Generator",
+    "title": "Stable Audio 3 Music Generator",
     "prompt": "Prompt",
     "prompt_placeholder": "A love story of Romeo and Juliet",
-    "generate": "Generate Music",
+    "generate": "Generate with Stable Audio 3",
     "loading": "Loading...",
     "generating": "Generating...",
     "sign_in_to_generate": "Sign In to Generate Music",
@@ -19,7 +19,7 @@
     "credits_remaining": "{credits} credits remaining",
     "buy_credits": "Buy Credits",
     "generation_progress": "Generation Progress",
-    "time_cost": "Test mode finishes quickly. Stable Audio 3.0 may take 2-3 minutes...",
+    "time_cost": "Test mode finishes quickly. Stable Audio 3 may take 2-3 minutes...",
     "generated_song": "Generated Song",
     "ready_to_play": "Ready to Play",
     "audio_generating": "Audio Generating...",
@@ -53,10 +53,10 @@
       "prompt_placeholder": "Warm lo-fi electronic music, 90bpm, soft drums, night city atmosphere, ideal for short-form video",
       "provider": "Provider",
       "provider_test": "Free Test Audio",
-      "provider_stability": "Stable Audio 3.0",
+      "provider_stability": "Stable Audio 3",
       "model": "Model",
       "model_test": "Free Test Audio",
-      "model_stability": "Stable Audio 3.0",
+      "model_stability": "Stable Audio 3",
       "lyrics": "Lyrics",
       "lyrics_placeholder": "Write your own lyrics, two verses (8 lines) for the best result"
     }

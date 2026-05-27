@@ -1,6 +1,7 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 import { getThemePage } from '@/core/theme';
+import { MusicGenerator } from '@/shared/blocks/generator';
 import { getSeoCopyMetadata } from '@/shared/lib/seo-copy-metadata';
 import { getConfigs } from '@/shared/models/config';
 import { applyHomeSeoCopy } from '@/shared/services/seo-copy';
@@ -13,11 +14,11 @@ export const generateMetadata = getSeoCopyMetadata({
   titleKey: 'seo_home_title',
   descriptionKey: 'seo_home_description',
   fallbackTitle: {
-    en: 'AI Music Generator',
+    en: 'Stable Audio 3 Generator: AI Music Maker',
     zh: 'AI 音乐生成器',
   },
   fallbackDescription: {
-    en: 'Turn genre, mood, tempo, and instruments into playable music demos, background tracks, and audio ideas.',
+    en: 'Create AI music with Stable Audio 3. Turn prompts into songs, loops, background music, and text to audio drafts for videos, games, podcasts, and creators.',
     zh: '输入风格、情绪、节奏和乐器，快速生成可播放的音乐 Demo、短视频配乐和声音灵感。',
   },
   canonicalUrl: '/',
@@ -37,6 +38,21 @@ export default async function LandingPage({
   const page: DynamicPage = t.raw('page');
   const configs = await getConfigs();
   applyHomeSeoCopy(page, configs, locale);
+
+  page.sections = {
+    ...page.sections,
+    generator: {
+      component: (
+        <MusicGenerator
+          srOnlyTitle={
+            locale === 'en'
+              ? 'Stable Audio 3 music generator'
+              : 'Stable Audio 3 音乐生成器'
+          }
+        />
+      ),
+    },
+  };
 
   // load page component
   const Page = await getThemePage('dynamic-page');

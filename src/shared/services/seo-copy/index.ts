@@ -24,19 +24,19 @@ export type SeoCopyLocale = 'en' | 'zh';
 
 export const seoCopyDefaultsByLocale: Record<SeoCopyLocale, SeoCopy> = {
   en: {
-    seo_home_title: 'AI Music Generator',
+    seo_home_title: 'Stable Audio 3 Generator: AI Music Maker',
     seo_home_description:
-      'Turn genre, mood, tempo, and instruments into playable music demos, background tracks, and audio ideas.',
-    seo_home_hero_title: 'AI Music Generator',
-    seo_home_hero_highlight: 'Music Generation',
+      'Create AI music with Stable Audio 3. Turn prompts into songs, loops, background music, and text to audio drafts for videos, games, podcasts, and creators.',
+    seo_home_hero_title: 'Stable Audio 3 Generator for AI Music Creation',
+    seo_home_hero_highlight: 'Stable Audio 3',
     seo_home_hero_description:
-      'Turn genre, mood, tempo, and instruments into playable music demos, background tracks, and audio ideas.',
-    seo_music_title: 'AI Music Generator',
+      'Create songs, loops, background music, and sound ideas with Stable Audio 3. Write a prompt, test the flow, then generate text to audio drafts for video, games, podcasts, ads, and creators.',
+    seo_music_title: 'Stable Audio 3 Music Generator',
     seo_music_description:
-      'Turn musical direction, mood, tempo, and instruments into playable AI audio.',
-    seo_music_page_title: 'AI Music Generator',
+      'Generate AI music with Stable Audio 3. Write prompts for songs, loops, background music, and text to audio drafts you can preview and download.',
+    seo_music_page_title: 'Stable Audio 3 Music Generator',
     seo_music_page_description:
-      'Turn musical direction, mood, tempo, and instruments into playable AI audio.',
+      'Use Stable Audio 3 to turn genre, mood, BPM, instruments, and lyrics into playable AI music drafts.',
     seo_pricing_title: 'Music Credits',
     seo_pricing_description:
       'Choose site credits to test and generate AI music.',

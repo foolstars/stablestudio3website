@@ -1,15 +1,57 @@
-<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://your-domain.com/</loc>
-    <lastmod>2025-11-15T10:00:00+00:00</lastmod>
+    <loc>https://shipany-template-two-dev-main.vercel.app/en</loc>
+    <lastmod>2026-05-27T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/blog</loc>
-    <lastmod>2025-11-15T10:00:00+00:00</lastmod>
+    <loc>https://shipany-template-two-dev-main.vercel.app/en/ai-music-generator</loc>
+    <lastmod>2026-05-27T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/showcases</loc>
-    <lastmod>2025-11-15T10:00:00+00:00</lastmod>
+    <loc>https://shipany-template-two-dev-main.vercel.app/en/pricing</loc>
+    <lastmod>2026-05-27T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shipany-template-two-dev-main.vercel.app/en/blog</loc>
+    <lastmod>2026-05-27T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shipany-template-two-dev-main.vercel.app/en/blog/what-is-xxx</loc>
+    <lastmod>2026-05-27T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://shipany-template-two-dev-main.vercel.app/en/privacy-policy</loc>
+    <lastmod>2026-05-27T00:00:00+08:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://shipany-template-two-dev-main.vercel.app/en/terms-of-service</loc>
+    <lastmod>2026-05-27T00:00:00+08:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://shipany-template-two-dev-main.vercel.app/zh</loc>
+    <lastmod>2026-05-27T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://shipany-template-two-dev-main.vercel.app/zh/blog/what-is-xxx</loc>
+    <lastmod>2026-05-27T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>

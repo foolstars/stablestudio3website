@@ -203,7 +203,9 @@ export function MusicGenerator({ className, srOnlyTitle }: SongGeneratorProps) {
         setProgress(0);
         setIsGenerating(false);
         setGenerationStartTime(null);
-        toast.error(`${t('generator.errors.generate_failed')}: ${errorMessage}`);
+        toast.error(
+          `${t('generator.errors.generate_failed')}: ${errorMessage}`
+        );
 
         fetchUserCredits();
 
@@ -228,7 +230,9 @@ export function MusicGenerator({ className, srOnlyTitle }: SongGeneratorProps) {
       setIsGenerating(false);
       setProgress(0);
       setGenerationStartTime(null);
-      toast.error(t('generator.errors.create_failed', { message: error.message }));
+      toast.error(
+        t('generator.errors.create_failed', { message: error.message })
+      );
 
       fetchUserCredits();
 
@@ -470,19 +474,20 @@ export function MusicGenerator({ className, srOnlyTitle }: SongGeneratorProps) {
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
+                <div className="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
+                  <div className="flex shrink-0 items-center gap-2">
                     <Switch
                       checked={customMode}
                       onCheckedChange={setCustomMode}
                     />
                     <Label>{t('generator.form.custom_mode')}</Label>
                   </div>
-                  <div className="flex-1"></div>
-                  <div className="flex items-center gap-4">
-                    <Label>{t('generator.form.provider')}</Label>
+                  <div className="grid min-w-0 grid-cols-1 gap-3 sm:grid-cols-2 xl:flex xl:items-center xl:gap-4">
+                    <Label className="self-center">
+                      {t('generator.form.provider')}
+                    </Label>
                     <Select value={provider} onValueChange={setProvider}>
-                      <SelectTrigger className="w-44">
+                      <SelectTrigger className="w-full xl:w-44">
                         <SelectValue />
                       </SelectTrigger>
                       <SelectContent>
@@ -494,9 +499,11 @@ export function MusicGenerator({ className, srOnlyTitle }: SongGeneratorProps) {
                         </SelectItem>
                       </SelectContent>
                     </Select>
-                    <Label>{t('generator.form.model')}</Label>
+                    <Label className="self-center">
+                      {t('generator.form.model')}
+                    </Label>
                     <Select value={model} onValueChange={setModel}>
-                      <SelectTrigger className="w-40">
+                      <SelectTrigger className="w-full xl:w-40">
                         <SelectValue />
                       </SelectTrigger>
                       <SelectContent>

@@ -1,15 +1,15 @@
 {
   "metadata": {
-    "title": "Music Creation Blog",
-    "description": "Read AI music prompt, model test, and audio creation updates."
+    "title": "Stable Audio 3 Blog for AI Music Creation",
+    "description": "Read Stable Audio 3 guides, AI music prompt tips, text to audio workflows, model tests, and audio generation updates for creators."
   },
   "page": {
-    "title": "Music Creation Blog",
+    "title": "Stable Audio 3 Blog",
     "sections": {
       "blog": {
         "id": "blog",
-        "title": "Music Creation Blog",
-        "description": "Read AI music prompt, model test, and audio creation updates."
+        "title": "Stable Audio 3 Blog",
+        "description": "Read Stable Audio 3 prompt guides, AI music workflows, and audio generation updates."
       }
     }
   },
