@@ -54,4 +54,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
+  <url>
+    <loc>https://shipany-template-two-dev-main.vercel.app/zh/privacy-policy</loc>
+    <lastmod>2026-05-28T00:00:00+08:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://shipany-template-two-dev-main.vercel.app/zh/terms-of-service</loc>
+    <lastmod>2026-05-28T00:00:00+08:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
 </urlset>

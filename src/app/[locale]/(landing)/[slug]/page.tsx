@@ -3,6 +3,7 @@ import { setRequestLocale } from 'next-intl/server';
 
 import { getThemePage } from '@/core/theme';
 import { envConfigs } from '@/config';
+import { locales } from '@/config/locale';
 import { getLocalPage } from '@/shared/models/post';
 
 const pageSlugs = ['privacy-policy', 'terms-of-service'] as const;
@@ -10,7 +11,12 @@ const pageSlugs = ['privacy-policy', 'terms-of-service'] as const;
 export const revalidate = 3600;
 
 export function generateStaticParams() {
-  return pageSlugs.map((slug) => ({ slug }));
+  return locales.flatMap((locale) =>
+    pageSlugs.map((slug) => ({
+      locale,
+      slug,
+    }))
+  );
 }
 
 export async function generateMetadata({
