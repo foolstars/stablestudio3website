@@ -474,7 +474,7 @@ export function MusicGenerator({ className, srOnlyTitle }: SongGeneratorProps) {
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
-                <div className="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
+                <div className="flex flex-col gap-4 xl:flex-row xl:items-start">
                   <div className="flex shrink-0 items-center gap-2">
                     <Switch
                       checked={customMode}
@@ -482,43 +482,43 @@ export function MusicGenerator({ className, srOnlyTitle }: SongGeneratorProps) {
                     />
                     <Label>{t('generator.form.custom_mode')}</Label>
                   </div>
-                  <div className="grid min-w-0 grid-cols-1 gap-3 sm:grid-cols-2 xl:flex xl:items-center xl:gap-4">
-                    <Label className="self-center">
-                      {t('generator.form.provider')}
-                    </Label>
-                    <Select value={provider} onValueChange={setProvider}>
-                      <SelectTrigger className="w-full xl:w-44">
-                        <SelectValue />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="test-audio">
-                          {t('generator.form.provider_test')}
-                        </SelectItem>
-                        <SelectItem value="stability">
-                          {t('generator.form.provider_stability')}
-                        </SelectItem>
-                      </SelectContent>
-                    </Select>
-                    <Label className="self-center">
-                      {t('generator.form.model')}
-                    </Label>
-                    <Select value={model} onValueChange={setModel}>
-                      <SelectTrigger className="w-full xl:w-40">
-                        <SelectValue />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {provider === 'test-audio' && (
-                          <SelectItem value="free-test-audio">
-                            {t('generator.form.model_test')}
+                  <div className="grid min-w-0 flex-1 grid-cols-1 gap-3 sm:grid-cols-2">
+                    <div className="min-w-0 space-y-2">
+                      <Label>{t('generator.form.provider')}</Label>
+                      <Select value={provider} onValueChange={setProvider}>
+                        <SelectTrigger className="w-full max-w-full min-w-0">
+                          <SelectValue />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="test-audio">
+                            {t('generator.form.provider_test')}
                           </SelectItem>
-                        )}
-                        {provider === 'stability' && (
-                          <SelectItem value="stable-audio-3">
-                            {t('generator.form.model_stability')}
+                          <SelectItem value="stability">
+                            {t('generator.form.provider_stability')}
                           </SelectItem>
-                        )}
-                      </SelectContent>
-                    </Select>
+                        </SelectContent>
+                      </Select>
+                    </div>
+                    <div className="min-w-0 space-y-2">
+                      <Label>{t('generator.form.model')}</Label>
+                      <Select value={model} onValueChange={setModel}>
+                        <SelectTrigger className="w-full max-w-full min-w-0">
+                          <SelectValue />
+                        </SelectTrigger>
+                        <SelectContent>
+                          {provider === 'test-audio' && (
+                            <SelectItem value="free-test-audio">
+                              {t('generator.form.model_test')}
+                            </SelectItem>
+                          )}
+                          {provider === 'stability' && (
+                            <SelectItem value="stable-audio-3">
+                              {t('generator.form.model_stability')}
+                            </SelectItem>
+                          )}
+                        </SelectContent>
+                      </Select>
+                    </div>
                   </div>
                 </div>
               </CardContent>
